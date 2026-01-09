@@ -167,6 +167,115 @@
         margin-bottom: 0;
       }
       
+      /* Journey Dashboard */
+      .journey-dashboard {
+        padding: 50px;
+        background: white;
+      }
+
+      .journey-dashboard h2 {
+        text-align: center;
+        color: var(--navy-dark);
+        margin-bottom: 40px;
+        border: none;
+      }
+      .journey-dashboard h2::before { display: none; }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+
+      .module-card {
+        background: var(--elegant-white);
+        border: 1px solid var(--soft-gray);
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+        transition: all 0.3s;
+        border-top: 5px solid var(--primary-gold);
+      }
+
+      .module-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+
+      .module-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .module-icon {
+        font-size: 2rem;
+        background: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      }
+
+      .module-title {
+        color: var(--navy-dark);
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+
+      .module-status {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--primary-gold);
+        background: rgba(197, 160, 89, 0.1);
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
+
+      /* Checklist Interactive */
+      .checklist-tool {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .checklist-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        cursor: pointer;
+      }
+
+      .checklist-item input {
+        margin-top: 4px;
+      }
+
+      /* Test Cards */
+      .test-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .test-mini-card {
+        background: white;
+        padding: 8px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        border: 1px solid var(--soft-gray);
+        text-align: center;
+      }
+
       .inner {
         padding: 50px;
       }
@@ -362,6 +471,71 @@
             <span class="audience-icon">📈</span>
             <h3>Busca Crescimento</h3>
             <p>Para psicólogos que desejam diversificar sua atuação e aumentar sua lucratividade.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey-dashboard">
+        <h2>Mapa da Sua Jornada</h2>
+        <div class="dashboard-grid">
+          <!-- Módulo 1 -->
+          <div class="module-card">
+            <span class="module-status">Aberto</span>
+            <div class="module-header">
+              <div class="module-icon">💡</div>
+              <div class="module-title">Etapa 1: Clareza</div>
+            </div>
+            <p>Fundamentos da perícia e mentalidade de sucesso.</p>
+          </div>
+
+          <!-- Módulo 2 -->
+          <div class="module-card">
+            <span class="module-status">Interativo</span>
+            <div class="module-header">
+              <div class="module-icon">⚖️</div>
+              <div class="module-title">Etapa 2: Legislação</div>
+            </div>
+            <div class="checklist-tool">
+              <strong>Checklist de Documentos:</strong>
+              <label class="checklist-item"><input type="checkbox"> Inscrição CRP-RJ</label>
+              <label class="checklist-item"><input type="checkbox"> 2 anos de experiência</label>
+              <label class="checklist-item"><input type="checkbox"> Certidões Negativas</label>
+            </div>
+          </div>
+
+          <!-- Módulo 3 -->
+          <div class="module-card">
+            <span class="module-status">Técnica</span>
+            <div class="module-header">
+              <div class="module-icon">🧱</div>
+              <div class="module-title">Etapa 3: Estrutura</div>
+            </div>
+            <div class="test-grid">
+              <div class="test-mini-card">Palográfico</div>
+              <div class="test-mini-card">Pfister</div>
+              <div class="test-mini-card">Zulliger</div>
+              <div class="test-mini-card">HTP</div>
+            </div>
+          </div>
+
+          <!-- Módulo 4 -->
+          <div class="module-card">
+            <span class="module-status">Simulador</span>
+            <div class="module-header">
+              <div class="module-icon">🧠</div>
+              <div class="module-title">Etapa 4: Clínica</div>
+            </div>
+            <p>Aplicação prática e o Simulador de Entrevista.</p>
+          </div>
+
+          <!-- Módulo 5 -->
+          <div class="module-card">
+            <span class="module-status">Calculadora</span>
+            <div class="module-header">
+              <div class="module-icon">🚀</div>
+              <div class="module-title">Etapa 5: Autonomia</div>
+            </div>
+            <p>Gestão de carreira e lucratividade sustentável.</p>
           </div>
         </div>
       </section>
