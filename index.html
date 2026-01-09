@@ -276,6 +276,83 @@
         text-align: center;
       }
 
+      /* Simulation Tool */
+      .simulation-tool {
+        margin-top: 15px;
+        text-align: left;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--soft-gray);
+      }
+
+      .simulation-question {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+      }
+
+      .simulation-option {
+        display: block;
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        background: var(--elegant-white);
+        border: 1px solid var(--soft-gray);
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: left;
+        font-size: 0.85rem;
+        transition: background 0.3s;
+      }
+
+      .simulation-option:hover {
+        background: var(--secondary-gold);
+        color: var(--navy-dark);
+      }
+
+      .simulation-feedback {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        display: none;
+      }
+
+      /* Calculator Tool */
+      .calculator-tool {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .calc-input-group {
+        margin-bottom: 12px;
+      }
+
+      .calc-input-group label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .calc-input-group input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid var(--soft-gray);
+        border-radius: 5px;
+      }
+
+      .calc-result {
+        margin-top: 15px;
+        padding: 15px;
+        background: var(--navy-dark);
+        color: white;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        border-left: 4px solid var(--primary-gold);
+      }
+
       .inner {
         padding: 50px;
       }
@@ -525,7 +602,12 @@
               <div class="module-icon">🧠</div>
               <div class="module-title">Etapa 4: Clínica</div>
             </div>
-            <p>Aplicação prática e o Simulador de Entrevista.</p>
+            <div class="simulation-tool">
+              <div class="simulation-question">O paciente relatou que está sob forte estresse no trabalho. O que você pergunta agora?</div>
+              <button class="simulation-option" onclick="showFeedback('correct')">A) Como você lida com situações de conflito sob estresse?</button>
+              <button class="simulation-option" onclick="showFeedback('wrong')">B) Você já pensou em usar a arma contra seus colegas?</button>
+              <div id="sim-feedback" class="simulation-feedback"></div>
+            </div>
           </div>
 
           <!-- Módulo 5 -->
@@ -535,10 +617,45 @@
               <div class="module-icon">🚀</div>
               <div class="module-title">Etapa 5: Autonomia</div>
             </div>
-            <p>Gestão de carreira e lucratividade sustentável.</p>
+            <div class="calculator-tool">
+              <div class="calc-input-group">
+                <label>Laudos por mês:</label>
+                <input type="number" id="laudos-mes" value="2" oninput="calculatePlan()">
+              </div>
+              <div class="calc-input-group">
+                <label>Valor por laudo (R$):</label>
+                <input type="number" id="valor-laudo" value="500" oninput="calculatePlan()">
+              </div>
+              <div id="calc-result" class="calc-result">
+                Atendendo 2 pacientes por mês, você gera R$ 1.000,00 e paga seu investimento rapidamente mantendo sua ética intacta.
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      <script>
+        function showFeedback(type) {
+          const fb = document.getElementById('sim-feedback');
+          fb.style.display = 'block';
+          if (type === 'correct') {
+            fb.style.backgroundColor = 'rgba(74, 124, 89, 0.2)';
+            fb.style.color = '#4a7c59';
+            fb.innerHTML = '<strong>Excelente!</strong> Essa abordagem investiga a regulação emocional sem gerar defesa imediata.';
+          } else {
+            fb.style.backgroundColor = 'rgba(198, 109, 66, 0.2)';
+            fb.style.color = '#c66d42';
+            fb.innerHTML = '<strong>Cuidado:</strong> Essa pergunta pode ser muito direta e gerar defesa. O melhor seria investigar a regulação emocional primeiro.';
+          }
+        }
+
+        function calculatePlan() {
+          const n = document.getElementById('laudos-mes').value;
+          const v = document.getElementById('valor-laudo').value;
+          const total = n * v;
+          document.getElementById('calc-result').innerHTML = `Atendendo ${n} pacientes por mês, você gera R$ ${total.toLocaleString('pt-BR')} e paga seu investimento rapidamente mantendo sua ética intacta.`;
+        }
+      </script>
 
       <div class="inner">
         <!-- CAPA -->
