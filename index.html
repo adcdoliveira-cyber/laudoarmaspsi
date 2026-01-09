@@ -182,6 +182,42 @@
             color: var(--text-main);
         }
 
+        .module-details-content h4 {
+            color: var(--navy-petroleum);
+            margin: 20px 0 10px;
+            border-bottom: 1px solid var(--soft-gray);
+            padding-bottom: 5px;
+        }
+
+        .module-details-content ul, .module-details-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .module-details-content li {
+            margin-bottom: 8px;
+        }
+
+        .test-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .test-card {
+            background: var(--bg-off-white);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--soft-gray);
+        }
+
+        .test-card strong {
+            color: var(--navy-petroleum);
+            display: block;
+            margin-bottom: 5px;
+        }
+
         /* "How Learning Happens" Section */
         .didactics-section {
             padding: 80px 0;
@@ -258,12 +294,29 @@
                     <img src="attached_assets/stock_images/psychology_evalua_b645547d.jpg" alt="Clareza e Atuação" class="card-image">
                     <div class="card-content">
                         <h3>1. Clareza e campo de atuação</h3>
-                        <p>Entenda o mercado, os fundamentos éticos e como se posicionar como autoridade no Rio de Janeiro.</p>
+                        <p>Entenda o mercado, os fundamentos éticos e as características psicológicas que definem o perfil do portador de armas.</p>
                         <details class="module-details">
                             <summary>Ver conteúdo do módulo</summary>
                             <div class="module-details-content">
+                                <h4>Resumo Executivo</h4>
                                 <p>Este guia orienta psicólogos do Rio de Janeiro a iniciarem atuação com laudos psicológicos para porte e registro de armas de fogo, abrangendo credenciamento na Polícia Federal, custos, testes necessários, legislação e prática profissional.</p>
-                                <p>A avaliação psicológica para manuseio de arma de fogo é exigida pela Lei nº 10.826/2003 (Estatuto do Desarmamento) e regulamentada por dispositivos específicos que determinam o modo de atuação do psicólogo.</p>
+                                
+                                <h4>Introdução</h4>
+                                <p>A avaliação psicológica para manuseio de arma de fogo é exigida pela <strong>Lei nº 10.826/2003</strong> (Estatuto do Desarmamento) e regulamentada por dispositivos específicos que determinam o modo de atuação do psicólogo e os requisitos para o credenciamento junto à Polícia Federal.</p>
+                                <p><strong>Objetivo da avaliação</strong>: verificar se o candidato possui características psicológicas e cognitivas adequadas para manusear arma de fogo com segurança, considerando dimensões emocionais, cognitivas, de personalidade e de julgamento crítico, com foco na proteção da vida e na prevenção de riscos.</p>
+
+                                <h4>Características Psicológicas Avaliadas</h4>
+                                <p>A avaliação foca em dimensões fundamentais para a segurança pública e individual:</p>
+                                <ul>
+                                    <li><strong>Regulação Emocional</strong>: Capacidade de manter o equilíbrio diante de situações estressantes.</li>
+                                    <li><strong>Controle de Impulsos</strong>: Habilidade de frear reações automáticas em momentos críticos.</li>
+                                    <li><strong>Agressividade</strong>: Nível de canalização e controle de impulsos agressivos.</li>
+                                    <li><strong>Julgamento Crítico</strong>: Capacidade de avaliar riscos e consequências de forma realista.</li>
+                                    <li><strong>Atenção e Memória</strong>: Funções cognitivas necessárias para a operação segura do instrumento.</li>
+                                </ul>
+
+                                <h4>Considerações Finais</h4>
+                                <p>A atuação nesta área exige rigor técnico, atualização constante e compromisso ético inabalável. O psicólogo perito é um agente de prevenção que contribui diretamente para a redução de riscos sociais.</p>
                             </div>
                         </details>
                     </div>
@@ -274,12 +327,38 @@
                     <img src="attached_assets/stock_images/psychological_evalua_83b4853c.jpg" alt="Legislação Clínica" class="card-image">
                     <div class="card-content">
                         <h3>2. Legislação traduzida para a clínica</h3>
-                        <p>Domine os requisitos de credenciamento e a documentação necessária sem juridiquês.</p>
+                        <p>Domine os requisitos de credenciamento, obrigações éticas e os impedimentos legais sem juridiquês.</p>
                         <details class="module-details">
                             <summary>Ver conteúdo do módulo</summary>
                             <div class="module-details-content">
-                                <p>Para atuar formalmente junto à Polícia Federal, o psicólogo precisa atender a requisitos como: Inscrição ativa no CRP-RJ, mínimo de 2 anos de experiência e certidões negativas variadas.</p>
-                                <p>Checklist essencial: Certificado de aptidão para testes, Alvarás de funcionamento e sanitário, e declarações de antecedentes criminais.</p>
+                                <h4>Requisitos para Credenciamento na Polícia Federal</h4>
+                                <p>Requisitos básicos para psicólogos no Rio de Janeiro:</p>
+                                <ul>
+                                    <li>Inscrição ativa no CRP-RJ.</li>
+                                    <li>Mínimo de 2 anos de exercício profissional comprovado.</li>
+                                    <li>Certidão Negativa de Infrações Éticas emitida pelo CRP-RJ.</li>
+                                    <li>Certificado de aptidão para aplicação de testes projetivos e expressivos.</li>
+                                </ul>
+
+                                <h4>Obrigações Éticas e Legais</h4>
+                                <p>O psicólogo deve observar a <strong>Resolução CFP nº 01/2022</strong> e a <strong>Instrução Normativa PF nº 78/2014</strong>. É obrigatória a guarda dos documentos por no mínimo 5 anos e o sigilo profissional absoluto, ressalvadas as exigências legais de comunicação à Polícia Federal.</p>
+
+                                <h4>Impedimentos Éticos</h4>
+                                <p>Não pode realizar a avaliação o psicólogo que:</p>
+                                <ul>
+                                    <li>Tenha vínculo de parentesco até terceiro grau com o candidato.</li>
+                                    <li>Mantenha relação de amizade íntima ou inimizade notória.</li>
+                                    <li>Seja ou tenha sido psicoterapeuta do avaliado.</li>
+                                    <li>Possua qualquer interesse direto ou indireto no resultado da avaliação.</li>
+                                </ul>
+
+                                <h4>Legislação de Referência</h4>
+                                <ul>
+                                    <li>Lei nº 10.826/2003 (Estatuto do Desarmamento).</li>
+                                    <li>Decreto nº 11.615/2023.</li>
+                                    <li>Resolução CFP nº 01/2022 (Avaliação Psicológica).</li>
+                                    <li>Resolução CFP nº 06/2019 (Elaboração de Documentos).</li>
+                                </ul>
                             </div>
                         </details>
                     </div>
@@ -290,12 +369,46 @@
                     <img src="attached_assets/stock_images/psychological_evalua_73458ce5.jpg" alt="Estrutura Técnica" class="card-image">
                     <div class="card-content">
                         <h3>3. Estrutura técnica e critérios</h3>
-                        <p>Aprenda a bateria mínima de testes e como realizar o investimento correto em sua clínica.</p>
+                        <p>Aprenda a bateria mínima de testes, critérios de avaliação e como realizar o investimento correto em sua clínica.</p>
                         <details class="module-details">
                             <summary>Ver conteúdo do módulo</summary>
                             <div class="module-details-content">
-                                <p>Domine a aplicação de Testes Projetivos (Palográfico, Zulliger), Expressivos (Pfister, HTP), Memória, Atenção e Inteligência.</p>
-                                <p>Entenda os custos envolvidos em capacitação e materiais, garantindo a viabilidade financeira da sua nova especialidade.</p>
+                                <h4>Bateria Mínima de Testes Psicológicos</h4>
+                                <div class="test-card-grid">
+                                    <div class="test-card">
+                                        <strong>1. Teste Projetivo</strong>
+                                        Palográfico, Zulliger ou Rorschach.
+                                    </div>
+                                    <div class="test-card">
+                                        <strong>2. Teste Expressivo</strong>
+                                        Pfister (Pirâmides Coloridas) ou HTP.
+                                    </div>
+                                    <div class="test-card">
+                                        <strong>3. Teste de Memória</strong>
+                                        Memória Visual (TMV) ou RAVLT.
+                                    </div>
+                                    <div class="test-card">
+                                        <strong>4. Teste de Atenção</strong>
+                                        AC, AD, ROTAS-2 ou BDA.
+                                    </div>
+                                    <div class="test-card">
+                                        <strong>5. Teste de Inteligência</strong>
+                                        WASI, R-1, G-38 ou BPR-5.
+                                    </div>
+                                    <div class="test-card">
+                                        <strong>6. Entrevista</strong>
+                                        Semiestruturada com situações-problema.
+                                    </div>
+                                </div>
+
+                                <h4>Custos e Investimentos</h4>
+                                <p><strong>Credenciamento na PF:</strong> Gratuito.</p>
+                                <p><strong>Investimentos em Materiais:</strong></p>
+                                <ul>
+                                    <li>Cursos de Capacitação: R$ 500,00 a R$ 3.500,00.</li>
+                                    <li>Materiais de Testes: Coleções variam de R$ 250,00 a R$ 700,00 cada.</li>
+                                    <li>Manutenção de Consultório: Custos fixos de locação e alvarás.</li>
+                                </ul>
                             </div>
                         </details>
                     </div>
@@ -306,12 +419,23 @@
                     <img src="attached_assets/stock_images/psychological_evalua_2dba55a0.jpg" alt="Clínica Aplicada" class="card-image">
                     <div class="card-content">
                         <h3>4. Clínica aplicada e escrita do laudo</h3>
-                        <p>Do primeiro contato ao laudo final. Saiba o que avaliar e como fundamentar suas decisões.</p>
+                        <p>Do primeiro contato ao laudo final. Saiba como conduzir a avaliação e fundamentar suas decisões técnicas.</p>
                         <details class="module-details">
                             <summary>Ver conteúdo do módulo</summary>
                             <div class="module-details-content">
-                                <p>Foco na regulação emocional, controle de impulsos e agressividade. Aprenda a conduzir a entrevista semiestruturada com situações-problema.</p>
-                                <p>O processo culmina na elaboração do laudo fundamentado, peça chave para a segurança do profissional e do candidato.</p>
+                                <h4>Procedimentos da Avaliação Psicológica</h4>
+                                <p>O fluxo de atendimento ideal:</p>
+                                <ol>
+                                    <li><strong>Acolhimento e Contrato:</strong> Explicação do processo e assinatura do termo.</li>
+                                    <li><strong>Entrevista Semiestruturada:</strong> Investigação histórica e situações-problema.</li>
+                                    <li><strong>Aplicação da Bateria:</strong> Seguindo rigorosamente as normas dos manuais.</li>
+                                    <li><strong>Análise e Integração:</strong> Cruzamento de dados de todos os instrumentos.</li>
+                                    <li><strong>Elaboração do Laudo:</strong> Redação técnica conforme Resolução CFP 06/2019.</li>
+                                    <li><strong>Entrevista de Devolução:</strong> Comunicação do resultado ao candidato.</li>
+                                </ol>
+
+                                <h4>Passo a Passo Prático</h4>
+                                <p>Para o sucesso da avaliação, o psicólogo deve garantir ambiente privativo, iluminação adequada e ausência de interrupções. O registro documental deve ser minucioso, servindo de base para o laudo conclusivo de <strong>APTO</strong> ou <strong>INAPTO</strong>.</p>
                             </div>
                         </details>
                     </div>
@@ -322,11 +446,53 @@
                     <img src="attached_assets/stock_images/psychological_evalua_5cde7cfe.jpg" alt="Autonomia Profissional" class="card-image">
                     <div class="card-content">
                         <h3>5. Autonomia e sustentação profissional</h3>
-                        <p>Mantenha-se atualizado e seguro em sua prática contínua, tirando todas as dúvidas do dia a dia.</p>
+                        <p>Ferramentas práticas para o dia a dia, respostas para dúvidas comuns e materiais de apoio para sua clínica.</p>
                         <details class="module-details">
                             <summary>Ver conteúdo do módulo</summary>
                             <div class="module-details-content">
-                                <p>Dicas de organização do consultório, FAQ completo sobre credenciamento e tempo de atuação, e orientações sobre atualizações normativas.</p>
+                                <h4>Dicas Práticas</h4>
+                                <ul>
+                                    <li>Mantenha um arquivo físico ou digital seguro por 5 anos.</li>
+                                    <li>Revise seus laudos antes da assinatura final.</li>
+                                    <li>Participe de grupos de supervisão técnica.</li>
+                                    <li>Mantenha-se atualizado com o SATEPSI para validade dos testes.</li>
+                                </ul>
+
+                                <h4>Perguntas Frequentes (FAQ)</h4>
+                                <details class="faq-item">
+                                    <summary>Preciso de quanto tempo de CRP?</summary>
+                                    <div class="faq-content">No mínimo 2 anos de exercício profissional comprovado para credenciamento na PF.</div>
+                                </details>
+                                <details class="faq-item">
+                                    <summary>Como solicitar o credenciamento?</summary>
+                                    <div class="faq-content">Via Portal Gov.br ou presencialmente na Superintendência da PF no Rio de Janeiro.</div>
+                                </details>
+
+                                <h4>Links Úteis e Contatos</h4>
+                                <ul>
+                                    <li><a href="https://satepsi.cfp.org.br/">SATEPSI - Lista de Testes Favoráveis</a></li>
+                                    <li><a href="https://www.gov.br/pf/">Portal da Polícia Federal</a></li>
+                                    <li><a href="https://www.crprj.org.br/">Conselho Regional de Psicologia do RJ</a></li>
+                                </ul>
+
+                                <h4>Anexos e Checklists</h4>
+                                <div class="checklist">
+                                    <strong>Checklist de Credenciamento:</strong>
+                                    <label class="checklist-item"><input type="checkbox"> RG/CPF e Foto 3x4</label>
+                                    <label class="checklist-item"><input type="checkbox"> Inscrição CRP e Certidão Ética</label>
+                                    <label class="checklist-item"><input type="checkbox"> Certidões de Antecedentes Criminais</label>
+                                    <label class="checklist-item"><input type="checkbox"> Alvarás do Consultório</label>
+                                </div>
+                                <br>
+                                <div class="checklist">
+                                    <strong>Checklist de Aplicação:</strong>
+                                    <label class="checklist-item"><input type="checkbox"> Preparação do Ambiente</label>
+                                    <label class="checklist-item"><input type="checkbox"> Verificação de Material (Folhas de resposta, cronômetro)</label>
+                                    <label class="checklist-item"><input type="checkbox"> Roteiro de Entrevista em mãos</label>
+                                </div>
+                                <br>
+                                <h4>Modelo de Entrevista</h4>
+                                <p>Utilize perguntas que investiguem o comportamento em situações de risco: "Como você reagiria a uma fechada no trânsito estando armado?", "Em que situações você acredita que o uso da arma seria justificável?".</p>
                             </div>
                         </details>
                     </div>

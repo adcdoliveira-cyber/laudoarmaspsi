@@ -1,0 +1,110 @@
+O site e a jornada que você criou estão corretos e devem ser mantidos.
+NÃO refaça a estrutura da jornada. NÃO mude os nomes das fases.
+
+O problema é simples:
+o curso está incompleto — nem todo o conteúdo do sumário original foi incluído dentro das fases da jornada.
+
+O que precisa ser feito
+
+Manter exatamente as fases da jornada que já existem.
+
+Em cada fase da jornada, ao clicar, abrir o conteúdo completo correspondente.
+
+Adicionar o conteúdo que está faltando, distribuindo corretamente dentro das fases já criadas.
+
+Conteúdo que DEVE existir no curso (sumário completo)
+
+Todos os itens abaixo precisam estar dentro de alguma fase da jornada, acessíveis por clique:
+
+Resumo Executivo
+
+Introdução
+
+Requisitos para Credenciamento na Polícia Federal
+
+Bateria Mínima de Testes Psicológicos
+
+Custos e Investimentos
+
+Características Psicológicas Avaliadas
+
+Procedimentos da Avaliação Psicológica
+
+Impedimentos Éticos
+
+Obrigações Éticas e Legais
+
+Passo a Passo Prático
+
+Links Úteis e Contatos
+
+Perguntas Frequentes (FAQ)
+
+Dicas Práticas
+
+Legislação de Referência
+
+Considerações Finais
+
+Anexos:
+
+Checklist de Credenciamento
+
+Checklist de Aplicação
+
+Modelo de Entrevista
+
+Hoje, parte desse conteúdo não aparece ao abrir as fases da jornada.
+
+Como organizar (sem criar novas fases)
+
+Cada fase da jornada pode conter:
+
+texto
+
+subtópicos
+
+listas
+
+downloads (anexos)
+
+Se uma fase precisar conter mais de um item do sumário, tudo bem.
+
+O importante é:
+
+nenhum item do sumário pode ficar de fora
+
+tudo precisa estar acessível ao clicar nas fases existentes
+
+Regras importantes
+
+Não criar novas fases
+
+Não resumir conteúdo
+
+Não esconder conteúdo atrás de login
+
+Apenas completar o curso dentro da jornada atual
+
+Resultado esperado
+
+Ao clicar em qualquer fase da jornada:
+
+o usuário vê conteúdo real
+
+o curso deixa de ser apenas um “mapa”
+
+o material fica completo, navegável e validável
+
+Se quiser, no próximo passo eu posso:
+
+mapear exatamente qual item do sumário entra em qual fase da jornada
+
+ou revisar o texto de cada fase para ficar mais clínico, ético e seu
+
+Agora sim estamos falando da mesma coisa.
+
+isso perfeito... agora só quero que vc divida esta jornada e fale como seria a divião mais didatica 
+
+Perfeito. Agora é só organização pedagógica, não conceitual nem técnica.
+Vou dividir a jornada que já existe de forma didática, orgânica e clínica, respeitando o seu conteúdo e o jeito como um psicólogo realmente aprende e aplica.
