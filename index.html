@@ -13,9 +13,9 @@
             --bg-off-white: #F9FAFB;
             --navy-petroleum: #2C3E50;
             --green-moss: #27AE60;
-            --primary-gold: #c5a059;
             --soft-gray: #E5E7EB;
             --text-main: #374151;
+            --text-light: #6B7280;
             --white: #FFFFFF;
         }
 
@@ -33,351 +33,344 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--navy-petroleum) 0%, #1a252f 100%);
-            color: var(--white);
-            padding: 80px 0;
+            background-color: white;
+            padding: 100px 0 80px;
             text-align: center;
-            border-bottom: 6px solid var(--green-moss);
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            color: var(--navy-petroleum);
             margin-bottom: 1.5rem;
             line-height: 1.2;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero p {
-            font-size: 1.25rem;
+        .hero .subheadline {
+            font-size: 1.4rem;
+            color: var(--text-light);
             margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-bullets {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .bullet {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--navy-petroleum);
+        }
+
+        .bullet-icon {
+            color: var(--green-moss);
+            font-size: 1.2rem;
         }
 
         .btn-cta {
             background-color: var(--green-moss);
             color: var(--white);
-            padding: 18px 36px;
+            padding: 20px 40px;
             font-size: 1.2rem;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 50px;
             text-decoration: none;
             display: inline-block;
-            transition: transform 0.3s, background-color 0.3s;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(39, 174, 96, 0.2);
         }
 
         .btn-cta:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(39, 174, 96, 0.3);
             background-color: #219150;
         }
 
-        /* Timeline Journey */
+        /* Journey Section */
         .journey-section {
-            padding: 60px 0;
+            padding: 80px 0;
         }
 
         .journey-section h2 {
             text-align: center;
             color: var(--navy-petroleum);
-            margin-bottom: 50px;
-            font-size: 2rem;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
         }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
+        .journey-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--soft-gray);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--white);
-            border: 4px solid var(--green-moss);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left { left: 0; }
-        .right { left: 50%; }
-
-        .right::after { left: -10px; }
-
-        .content-box {
-            padding: 20px;
-            background-color: var(--white);
-            position: relative;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .journey-card {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border: 1px solid var(--soft-gray);
+            transition: transform 0.3s;
         }
 
-        .content-box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-color: var(--green-moss);
+        .journey-card:hover {
+            transform: translateY(-5px);
         }
 
-        .content-box h3 {
+        .card-image {
+            width: 40%;
+            min-height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 40px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content h3 {
+            color: var(--navy-petroleum);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .module-details {
+            margin-top: 10px;
+        }
+
+        .module-details summary {
+            cursor: pointer;
+            color: var(--green-moss);
+            font-weight: 600;
+            outline: none;
+        }
+
+        .module-details-content {
+            padding-top: 15px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* "How Learning Happens" Section */
+        .didactics-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .didactics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .didactic-item {
+            text-align: center;
+        }
+
+        .didactic-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .didactic-item h4 {
             color: var(--navy-petroleum);
             margin-bottom: 10px;
         }
 
-        .module-content {
-            display: none;
-            padding: 20px 0 0 0;
-            border-top: 1px solid var(--soft-gray);
-            margin-top: 15px;
-            text-align: justify;
-            font-size: 0.95rem;
-        }
-
-        .module-content.active {
-            display: block;
-        }
-
-        /* Specific Elements */
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .test-card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .test-card {
-            background: var(--bg-off-white);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--soft-gray);
-            font-size: 0.85rem;
-        }
-
-        .faq-item {
-            margin-bottom: 10px;
-            border: 1px solid var(--soft-gray);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .faq-item summary {
-            padding: 15px;
-            background: var(--white);
-            cursor: pointer;
-            font-weight: 600;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .faq-item summary::after {
-            content: '+';
-        }
-
-        .faq-item[open] summary::after {
-            content: '-';
-        }
-
-        .faq-content {
-            padding: 15px;
-            background: var(--bg-off-white);
-            border-top: 1px solid var(--soft-gray);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
+        .didactic-item p {
+            color: var(--text-light);
             font-size: 0.9rem;
         }
 
-        @media screen and (max-width: 600px) {
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item::after { left: 21px; }
-            .right { left: 0%; }
-            .hero h1 { font-size: 1.8rem; }
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            border-top: 1px solid var(--soft-gray);
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .journey-card { flex-direction: column; }
+            .card-image { width: 100%; height: 200px; }
+            .card-content { width: 100%; padding: 30px; }
+            .hero-bullets { flex-direction: column; align-items: center; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero">
+    <section class="hero">
         <div class="container">
             <h1>Uma formação que organiza, sustenta e dá segurança para sua atuação com laudos psicológicos.</h1>
-            <p>Da legislação à prática clínica, sem improviso, sem promessas vazias e sem violência com a sua ética.</p>
-            <a href="#" class="btn-cta">Quero iniciar minha jornada com segurança</a>
-        </div>
-    </header>
+            <p class="subheadline">Muitos psicólogos se sentem inseguros diante das exigências para o porte de armas. Nós traduzimos a legislação para a prática clínica real.</p>
+            
+            <div class="hero-bullets">
+                <div class="bullet"><span class="bullet-icon">✓</span> Segurança Jurídica</div>
+                <div class="bullet"><span class="bullet-icon">✓</span> Clareza Técnica</div>
+                <div class="bullet"><span class="bullet-icon">✓</span> Estrutura Prática</div>
+            </div>
 
-    <main class="container">
+            <a href="#jornada" class="btn-cta">Iniciar minha jornada</a>
+        </div>
+    </section>
+
+    <main class="container" id="jornada">
         <section class="journey-section">
-            <h2>Sua Jornada de Excelência</h2>
-            <div class="timeline">
+            <h2>Sua Jornada de Aprendizado</h2>
+            <div class="journey-grid">
                 
                 <!-- PASSO 1 -->
-                <div class="timeline-item left">
-                    <div class="content-box" onclick="toggleModule(this)">
-                        <h3>💡 PASSO 1: Clareza e Campo de Atuação</h3>
-                        <p>Fundamentos, mercado e o que você precisa saber antes de começar.</p>
-                        <div class="module-content">
-                            <h4>Resumo Executivo</h4>
-                            <p>Este guia orienta psicólogos do Rio de Janeiro a iniciarem atuação com laudos psicológicos para porte e registro de armas de fogo, abrangendo credenciamento na Polícia Federal, custos, testes necessários, legislação e prática profissional.</p>
-                            <br>
-                            <h4>1. Introdução ao Mercado</h4>
-                            <p>A avaliação psicológica para manuseio de arma de fogo é exigida pela Lei nº 10.826/2003 (Estatuto do Desarmamento) e regulamentada por dispositivos específicos que determinam o modo de atuação do psicólogo.</p>
-                            <p>Objetivo da avaliação: verificar se o candidato possui características psicológicas e cognitivas adequadas para manusear arma de fogo com segurança, considerando dimensões emocionais, cognitivas, de personalidade e de julgamento crítico.</p>
-                        </div>
+                <article class="journey-card">
+                    <img src="attached_assets/stock_images/psychology_evalua_b645547d.jpg" alt="Clareza e Atuação" class="card-image">
+                    <div class="card-content">
+                        <h3>1. Clareza e campo de atuação</h3>
+                        <p>Entenda o mercado, os fundamentos éticos e como se posicionar como autoridade no Rio de Janeiro.</p>
+                        <details class="module-details">
+                            <summary>Ver conteúdo do módulo</summary>
+                            <div class="module-details-content">
+                                <p>Este guia orienta psicólogos do Rio de Janeiro a iniciarem atuação com laudos psicológicos para porte e registro de armas de fogo, abrangendo credenciamento na Polícia Federal, custos, testes necessários, legislação e prática profissional.</p>
+                                <p>A avaliação psicológica para manuseio de arma de fogo é exigida pela Lei nº 10.826/2003 (Estatuto do Desarmamento) e regulamentada por dispositivos específicos que determinam o modo de atuação do psicólogo.</p>
+                            </div>
+                        </details>
                     </div>
-                </div>
+                </article>
 
                 <!-- PASSO 2 -->
-                <div class="timeline-item right">
-                    <div class="content-box" onclick="toggleModule(this)">
-                        <h3>⚖️ PASSO 2: Legislação sem Confusão</h3>
-                        <p>Requisitos de credenciamento e checklist de documentos necessários.</p>
-                        <div class="module-content">
-                            <h4>Requisitos para Credenciamento na Polícia Federal</h4>
-                            <p>Para atuar formalmente junto à Polícia Federal, o psicólogo precisa atender aos seguintes requisitos:</p>
-                            <div class="checklist">
-                                <label class="checklist-item"><input type="checkbox"> Inscrição ativa no CRP-RJ</label>
-                                <label class="checklist-item"><input type="checkbox"> Mínimo de 2 anos de exercício profissional</label>
-                                <label class="checklist-item"><input type="checkbox"> Certidão Negativa de Infrações Éticas</label>
-                                <label class="checklist-item"><input type="checkbox"> Certificado de aptidão para testes projetivos/expressivos</label>
-                                <label class="checklist-item"><input type="checkbox"> Certidões Negativas (Justiça Federal, Estadual, Militar, Eleitoral)</label>
-                                <label class="checklist-item"><input type="checkbox"> Alvará de localização e funcionamento</label>
-                                <label class="checklist-item"><input type="checkbox"> Alvará da Vigilância Sanitária</label>
+                <article class="journey-card">
+                    <img src="attached_assets/stock_images/psychological_evalua_83b4853c.jpg" alt="Legislação Clínica" class="card-image">
+                    <div class="card-content">
+                        <h3>2. Legislação traduzida para a clínica</h3>
+                        <p>Domine os requisitos de credenciamento e a documentação necessária sem juridiquês.</p>
+                        <details class="module-details">
+                            <summary>Ver conteúdo do módulo</summary>
+                            <div class="module-details-content">
+                                <p>Para atuar formalmente junto à Polícia Federal, o psicólogo precisa atender a requisitos como: Inscrição ativa no CRP-RJ, mínimo de 2 anos de experiência e certidões negativas variadas.</p>
+                                <p>Checklist essencial: Certificado de aptidão para testes, Alvarás de funcionamento e sanitário, e declarações de antecedentes criminais.</p>
                             </div>
-                        </div>
+                        </details>
                     </div>
-                </div>
+                </article>
 
                 <!-- PASSO 3 -->
-                <div class="timeline-item left">
-                    <div class="content-box" onclick="toggleModule(this)">
-                        <h3>🧱 PASSO 3: Estrutura Técnica</h3>
-                        <p>Bateria de testes, custos e investimentos para sua clínica.</p>
-                        <div class="module-content">
-                            <h4>Bateria Mínima de Testes Psicológicos</h4>
-                            <div class="test-card-grid">
-                                <div class="test-card"><strong>Projetivos</strong><br>Palográfico, Zulliger, Rorschach</div>
-                                <div class="test-card"><strong>Expressivos</strong><br>Pfister, HTP</div>
-                                <div class="test-card"><strong>Memória</strong><br>TMV, RAVLT</div>
-                                <div class="test-card"><strong>Atenção</strong><br>AC, AD, ROTAS-2</div>
-                                <div class="test-card"><strong>Inteligência</strong><br>WASI, R-1, BPR-5</div>
+                <article class="journey-card">
+                    <img src="attached_assets/stock_images/psychological_evalua_73458ce5.jpg" alt="Estrutura Técnica" class="card-image">
+                    <div class="card-content">
+                        <h3>3. Estrutura técnica e critérios</h3>
+                        <p>Aprenda a bateria mínima de testes e como realizar o investimento correto em sua clínica.</p>
+                        <details class="module-details">
+                            <summary>Ver conteúdo do módulo</summary>
+                            <div class="module-details-content">
+                                <p>Domine a aplicação de Testes Projetivos (Palográfico, Zulliger), Expressivos (Pfister, HTP), Memória, Atenção e Inteligência.</p>
+                                <p>Entenda os custos envolvidos em capacitação e materiais, garantindo a viabilidade financeira da sua nova especialidade.</p>
                             </div>
-                            <br>
-                            <h4>Custos e Investimentos</h4>
-                            <p>O credenciamento na PF é gratuito. O investimento principal será em cursos de capacitação (R$ 500 - R$ 3.500) e materiais de testes (R$ 25 - R$ 700 por bloco/coleção).</p>
-                        </div>
+                        </details>
                     </div>
-                </div>
+                </article>
 
                 <!-- PASSO 4 -->
-                <div class="timeline-item right">
-                    <div class="content-box" onclick="toggleModule(this)">
-                        <h3>🧠 PASSO 4: Clínica Aplicada</h3>
-                        <p>Características psicológicas avaliadas e procedimentos práticos.</p>
-                        <div class="module-content">
-                            <h4>Características Psicológicas Avaliadas</h4>
-                            <p>A avaliação foca em: regulação emocional, controle de impulsos, agressividade sob controle, atenção concentrada e julgamento crítico.</p>
-                            <br>
-                            <h4>Procedimentos da Avaliação</h4>
-                            <p>O processo deve incluir obrigatoriamente: entrevista semiestruturada (com situações-problema), aplicação dos testes selecionados e elaboração do laudo fundamentado.</p>
-                        </div>
+                <article class="journey-card">
+                    <img src="attached_assets/stock_images/psychological_evalua_2dba55a0.jpg" alt="Clínica Aplicada" class="card-image">
+                    <div class="card-content">
+                        <h3>4. Clínica aplicada e escrita do laudo</h3>
+                        <p>Do primeiro contato ao laudo final. Saiba o que avaliar e como fundamentar suas decisões.</p>
+                        <details class="module-details">
+                            <summary>Ver conteúdo do módulo</summary>
+                            <div class="module-details-content">
+                                <p>Foco na regulação emocional, controle de impulsos e agressividade. Aprenda a conduzir a entrevista semiestruturada com situações-problema.</p>
+                                <p>O processo culmina na elaboração do laudo fundamentado, peça chave para a segurança do profissional e do candidato.</p>
+                            </div>
+                        </details>
                     </div>
-                </div>
+                </article>
 
                 <!-- PASSO 5 -->
-                <div class="timeline-item left">
-                    <div class="content-box" onclick="toggleModule(this)">
-                        <h3>🚀 PASSO 5: Autonomia Profissional</h3>
-                        <p>Dicas práticas e as dúvidas mais frequentes dos colegas.</p>
-                        <div class="module-content">
-                            <h4>Dicas Práticas</h4>
-                            <p>Mantenha sempre seu consultório organizado, siga rigorosamente os manuais dos testes e mantenha-se atualizado com as resoluções do CFP e normativas da PF.</p>
-                            <br>
-                            <h4>Perguntas Frequentes (FAQ)</h4>
-                            <details class="faq-item">
-                                <summary>Preciso de quanto tempo de CRP?</summary>
-                                <div class="faq-content">No mínimo 2 anos de exercício profissional comprovado.</div>
-                            </details>
-                            <details class="faq-item">
-                                <summary>O credenciamento tem custo?</summary>
-                                <div class="faq-content">Não, o credenciamento na Polícia Federal é gratuito.</div>
-                            </details>
-                        </div>
+                <article class="journey-card">
+                    <img src="attached_assets/stock_images/psychological_evalua_5cde7cfe.jpg" alt="Autonomia Profissional" class="card-image">
+                    <div class="card-content">
+                        <h3>5. Autonomia e sustentação profissional</h3>
+                        <p>Mantenha-se atualizado e seguro em sua prática contínua, tirando todas as dúvidas do dia a dia.</p>
+                        <details class="module-details">
+                            <summary>Ver conteúdo do módulo</summary>
+                            <div class="module-details-content">
+                                <p>Dicas de organização do consultório, FAQ completo sobre credenciamento e tempo de atuação, e orientações sobre atualizações normativas.</p>
+                            </div>
+                        </details>
                     </div>
-                </div>
+                </article>
 
             </div>
         </section>
 
-        <section style="text-align: center; padding: 40px; background: white; border-radius: 12px; margin-top: 40px; border: 1px solid var(--soft-gray);">
-            <h2 style="margin-bottom: 20px; color: var(--navy-petroleum);">Pronta para dar o próximo passo?</h2>
-            <p style="margin-bottom: 30px;">Garantia incondicional de 7 dias. Se a metodologia não fizer sentido para sua clínica, devolvemos o investimento.</p>
-            <a href="#" class="btn-cta">Inscrever-me Agora</a>
+        <section class="didactics-section">
+            <h2 style="font-family: 'Playfair Display', serif; text-align: center; color: var(--navy-petroleum); font-size: 2.2rem;">Como o aprendizado acontece</h2>
+            <div class="didactics-grid">
+                <div class="didactic-item">
+                    <span class="didactic-icon">📚</span>
+                    <h4>Módulos Progressivos</h4>
+                    <p>Conteúdo organizado de forma lógica para construção do conhecimento.</p>
+                </div>
+                <div class="didactic-item">
+                    <span class="didactic-icon">🎥</span>
+                    <h4>Aulas Organizadas</h4>
+                    <p>Acesso direto a cada tema sem distrações ou excessos.</p>
+                </div>
+                <div class="didactic-item">
+                    <span class="didactic-icon">📝</span>
+                    <h4>Exemplos Clínicos</h4>
+                    <p>Casos reais e situações práticas do cotidiano da perícia.</p>
+                </div>
+                <div class="didactic-item">
+                    <span class="didactic-icon">🛠️</span>
+                    <h4>Exercícios Práticos</h4>
+                    <p>Atividades para fixação e segurança na aplicação técnica.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="text-align: center; padding: 60px 20px; background: white; border-radius: 30px; margin-top: 40px; border: 1px solid var(--soft-gray); box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+            <h2 style="margin-bottom: 20px; color: var(--navy-petroleum); font-family: 'Playfair Display', serif; font-size: 2rem;">Garantia de Confiança</h2>
+            <p style="margin-bottom: 30px; color: var(--text-light); max-width: 600px; margin-left: auto; margin-right: auto;">Oferecemos uma garantia incondicional de 7 dias. Nosso compromisso é com a sua segurança técnica e satisfação profissional.</p>
+            <a href="#" class="btn-cta">Garantir minha vaga agora</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Jornada do Psicólogo Elite - Rio de Janeiro</p>
+        <p>&copy; 2025 Jornada do Psicólogo Elite - Especialização em Laudos de Armas</p>
     </footer>
 
-    <script>
-        function toggleModule(element) {
-            const content = element.querySelector('.module-content');
-            const isActive = content.classList.contains('active');
-            
-            // Fecha todos os outros se quiser um estilo sanfona
-            // document.querySelectorAll('.module-content').forEach(c => c.classList.remove('active'));
-            
-            if (isActive) {
-                content.classList.remove('active');
-            } else {
-                content.classList.add('active');
-            }
-        }
-    </script>
 </body>
 </html>
