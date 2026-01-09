@@ -33,24 +33,25 @@
       color: var(--navy-petroleum);
     }
     h1 {
-      font-size: 2.6rem;
-      margin-bottom: 16px;
+      font-size: 2.8rem;
+      margin-bottom: 24px;
       line-height: 1.2;
     }
     .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--text-light);
-      max-width: 700px;
+      max-width: 800px;
+      margin-bottom: 40px;
     }
     .cta {
       display: inline-block;
-      margin-top: 32px;
-      padding: 14px 28px;
+      padding: 16px 32px;
       background: var(--green-moss);
       color: #fff;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
       transition: all 0.3s;
       box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
     }
@@ -59,11 +60,15 @@
       background: #219150;
       box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
     }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 80px 0 40px;
+    }
     .journey {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-top: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
     }
     .card {
       background: #fff;
@@ -73,45 +78,96 @@
       border: 1px solid var(--soft-gray);
       text-decoration: none;
       color: inherit;
-      display: block;
-      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
+      border-color: var(--green-moss);
     }
     .card span {
-      font-size: 0.85rem;
-      color: var(--text-light);
+      font-size: 0.75rem;
+      color: var(--green-moss);
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
     }
     .card h3 {
-      margin-top: 8px;
-      margin-bottom: 12px;
-      color: var(--navy-petroleum);
+      margin: 0 0 12px;
+      font-size: 1.25rem;
     }
     .who {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
-      margin-top: 64px;
+      margin-top: 40px;
+    }
+    .faq-section {
+      margin-top: 80px;
+    }
+    .faq-item {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid var(--soft-gray);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--navy-petroleum);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--green-moss);
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+    .faq-content {
+      padding: 0 20px 20px;
+      color: var(--text-light);
     }
     .quote {
-      margin-top: 64px;
-      padding: 32px;
+      margin-top: 80px;
+      padding: 40px;
       background: #eef2ff;
-      border-radius: 16px;
+      border-radius: 20px;
       font-style: italic;
-      border-left: 4px solid var(--accent-blue);
+      border-left: 6px solid var(--accent-blue);
+      position: relative;
+    }
+    .quote::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      color: rgba(37, 99, 235, 0.1);
+      font-family: serif;
     }
     footer {
-      margin-top: 80px;
+      margin-top: 100px;
       text-align: center;
-      padding-bottom: 40px;
+      padding-bottom: 60px;
+      border-top: 1px solid var(--soft-gray);
+      padding-top: 60px;
     }
 
     @media (max-width: 768px) {
-      h1 { font-size: 2rem; }
+      h1 { font-size: 2.2rem; }
+      .container { padding: 40px 20px; }
     }
   </style>
 </head>
@@ -119,68 +175,113 @@
 <body>
 
   <div class="container">
-    <h1>Uma formação que organiza, sustenta e dá segurança para sua atuação com laudos psicológicos</h1>
-    <p class="subtitle">
-      Da legislação à prática clínica: o caminho definitivo para uma atuação ética, segura e reconhecida no Rio de Janeiro.
-    </p>
+    <header>
+      <h1>Formação Especializada em Laudos Psicológicos no Rio de Janeiro</h1>
+      <p class="subtitle">
+        O caminho definitivo para psicólogos que buscam dominar a legislação e a prática clínica de avaliações para porte de armas com total segurança técnica e ética.
+      </p>
+      <a href="curso.html" class="cta">Iniciar Minha Jornada Agora</a>
+    </header>
 
-    <a href="curso.html" class="cta">Quero iniciar minha jornada com segurança</a>
-
+    <h2 class="section-title">O que você vai dominar</h2>
     <section class="journey">
       <a href="curso.html#jornada" class="card">
-        <span>Etapa 1</span>
-        <h3>Clareza</h3>
-        <p>Fundamentos da perícia psicológica e organização do campo de atuação.</p>
+        <span>Fase 1</span>
+        <h3>Clareza e Atuação</h3>
+        <p>Entenda o mercado pericial no RJ e os fundamentos éticos da profissão.</p>
       </a>
 
       <a href="curso.html#jornada" class="card">
-        <span>Etapa 2</span>
-        <h3>Legislação</h3>
-        <p>Requisitos, obrigações éticas e segurança jurídica para sua prática.</p>
+        <span>Fase 2</span>
+        <h3>Legislação Clínica</h3>
+        <p>Domine os requisitos da PF e as normativas do CFP sem complicações.</p>
       </a>
 
       <a href="curso.html#jornada" class="card">
-        <span>Etapa 3</span>
-        <h3>Técnica</h3>
-        <p>Estrutura da avaliação psicológica e uso responsável dos instrumentos.</p>
+        <span>Fase 3</span>
+        <h3>Estrutura Técnica</h3>
+        <p>Aprenda a bateria de testes e os critérios de avaliação técnica.</p>
       </a>
 
       <a href="curso.html#jornada" class="card">
-        <span>Etapa 4</span>
-        <h3>Clínica</h3>
-        <p>Raciocínio clínico aplicado a contextos avaliativos reais.</p>
+        <span>Fase 4</span>
+        <h3>Escrita do Laudo</h3>
+        <p>Raciocínio clínico aplicado e elaboração de documentos fundamentados.</p>
       </a>
 
       <a href="curso.html#jornada" class="card">
-        <span>Etapa 5</span>
+        <span>Fase 5</span>
         <h3>Autonomia</h3>
-        <p>Sustentabilidade profissional, ética e independência na prática.</p>
+        <p>Segurança para assinar seus laudos e sustentar sua prática profissional.</p>
       </a>
     </section>
 
+    <h2 class="section-title">Esta formação é para você?</h2>
     <section class="who">
       <div class="card">
-        <h3>🛡️ Medo de errar</h3>
-        <p>Para quem busca segurança técnica e jurídica para assinar seus laudos sem receios.</p>
+        <h3>🛡️ Busca Segurança Jurídica</h3>
+        <p>Para quem tem receio das implicações legais e quer atuar com respaldo total nas resoluções vigentes.</p>
       </div>
       <div class="card">
-        <h3>🧭 Sente-se confuso</h3>
-        <p>Para quem quer um passo a passo claro em meio à legislação e exigências.</p>
+        <h3>🧭 Precisa de Direcionamento</h3>
+        <p>Para quem se sente perdido no "juridiquês" e quer um passo a passo prático de credenciamento e aplicação.</p>
       </div>
       <div class="card">
-        <h3>📈 Busca crescimento</h3>
-        <p>Para psicólogos que desejam ampliar atuação e renda com ética.</p>
+        <h3>📈 Deseja se Destacar</h3>
+        <p>Para psicólogos que buscam uma especialidade lucrativa e com alta demanda no estado do Rio de Janeiro.</p>
       </div>
+    </section>
+
+    <section class="faq-section">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      
+      <details class="faq-item">
+        <summary>Preciso ter quanto tempo de formação para atuar?</summary>
+        <div class="faq-content">
+          Para o credenciamento junto à Polícia Federal, é exigido o mínimo de 2 anos de exercício profissional comprovado como psicólogo.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O curso ensina a aplicar os testes?</summary>
+        <div class="faq-content">
+          Sim, abordamos a bateria mínima exigida (projetivos, expressivos, memória, atenção e inteligência), focando nos critérios técnicos de avaliação para o contexto de armas.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Como funciona o credenciamento no Rio de Janeiro?</summary>
+        <div class="faq-content">
+          O processo é realizado via Polícia Federal. Orientamos sobre toda a documentação necessária, certidões e requisitos específicos para a Superintendência do RJ.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Terei acesso a modelos de laudos?</summary>
+        <div class="faq-content">
+          Sim, a formação inclui orientações detalhadas sobre a estrutura do laudo psicológico conforme a Resolução CFP 06/2019, garantindo que seu documento seja tecnicamente impecável.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>O material é atualizado conforme o novo decreto?</summary>
+        <div class="faq-content">
+          Com certeza. Nossa formação é constantemente atualizada para refletir as mudanças na legislação (como o Decreto nº 11.615/2023) e novas resoluções do Conselho Federal de Psicologia.
+        </div>
+      </details>
     </section>
 
     <div class="quote">
-      “A clareza técnica que essa formação proporciona é incrível.  
-      Finalmente sinto segurança para assinar meus laudos no RJ.”  
-      <br><strong>— Psicólogo Clínico</strong>
+      “A formação me deu a base que a faculdade não trouxe. Hoje realizo minhas avaliações com a certeza de que estou seguindo todos os critérios éticos e técnicos exigidos pela PF.”  
+      <br><strong>— Dra. Mariana Silva, Psicóloga Perita</strong>
     </div>
 
     <footer>
-      <a href="curso.html" class="cta">Acessar a página do curso</a>
+      <p>Pronto para elevar o nível da sua atuação clínica?</p>
+      <a href="curso.html" class="cta">Acessar Conteúdo Completo</a>
+      <p style="margin-top: 40px; font-size: 0.9rem; color: var(--text-light);">
+        &copy; 2025 Formação Psicólogo Elite - Laudos de Armas RJ
+      </p>
     </footer>
   </div>
 
