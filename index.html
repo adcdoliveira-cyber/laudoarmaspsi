@@ -415,6 +415,46 @@
         border-left: 4px solid var(--primary-gold);
       }
 
+      .cta-section {
+        padding: 60px 50px;
+        text-align: center;
+        background: white;
+        border-top: 1px solid var(--soft-gray);
+      }
+
+      .btn-primary {
+        background: var(--navy-dark);
+        color: white;
+        padding: 18px 35px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .btn-primary:hover {
+        background: var(--navy-light);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(10, 25, 47, 0.3);
+        color: var(--secondary-gold);
+      }
+
+      .guarantee-text {
+        display: block;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #666;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+      }
+
       .inner {
         padding: 50px;
       }
@@ -764,6 +804,14 @@
           document.getElementById('calc-result').innerHTML = `Atendendo ${n} pacientes por mês, você gera R$ ${total.toLocaleString('pt-BR')} e paga seu investimento rapidamente mantendo sua ética intacta.`;
         }
       </script>
+
+      <section class="cta-section">
+        <a href="#" class="btn-primary">Quero iniciar minha jornada com segurança</a>
+        <span class="guarantee-text">
+          🛡️ <strong>Garantia incondicional de 7 dias.</strong><br>
+          Se a metodologia não fizer sentido para sua clínica, devolvemos o investimento. Sem perguntas.
+        </span>
+      </section>
 
       <div class="inner">
         <!-- CAPA -->
