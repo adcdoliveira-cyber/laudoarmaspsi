@@ -1,0 +1,47 @@
+Atue como um Desenvolvedor Front-End Sênior e Designer de UX.
+
+Eu tenho um arquivo index.html atual que contém um conteúdo rico em texto (um "Manual Completo"). O meu objetivo é transformar esse documento estático em uma Landing Page de Curso Interativo baseada em uma "Jornada de Aprendizado".
+
+Por favor, reescreva todo o código do meu index.html seguindo estas instruções rigorosas:
+
+1. ESTRUTURA VISUAL (DESIGN)
+- O design deve ser "Clínico, Limpo e Seguro". Use muito espaço em branco, fonte sans-serif moderna (Inter ou Roboto) e uma paleta de cores: Fundo Off-White (#F9FAFB), Azul Petróleo (#2C3E50) para textos e Verde Musgo (#27AE60) para destaques/botões.
+- O site não pode parecer um "bloco de texto". Deve parecer um aplicativo ou dashboard.
+
+2. HEADER (HERO SECTION)
+- Substitua o topo atual por uma seção Hero acolhedora.
+- Título H1: "Uma formação que organiza, sustenta e dá segurança para sua atuação com laudos psicológicos."
+- Subtítulo: "Da legislação à prática clínica, sem improviso, sem promessas vazias e sem violência com a sua ética."
+- Botão CTA (Destaque): "Quero iniciar minha jornada com segurança".
+
+3. A JORNADA (INTEGRAÇÃO DO CONTEÚDO)
+- Crie uma linha do tempo vertical (Timeline) interativa no centro da página.
+- Oculte o texto atual do manual e distribua-o dentro de "Accordions" (caixas que abrem e fecham) ou Modais vinculados a cada passo da jornada.
+
+FAÇA A SEGUINTE ASSOCIAÇÃO DO CONTEÚDO EXISTENTE PARA A NOVA JORNADA:
+
+PASSO 1 DA JORNADA: "Clareza e Campo de Atuação"
+- Coloque aqui o conteúdo das seções atuais: "1. Introdução ao Mercado" e "Resumo Executivo".
+
+PASSO 2 DA JORNADA: "Legislação sem Confusão"
+- Coloque aqui o conteúdo das seções atuais: "2. Requisitos para Credenciamento" e "Anexos (Checklist)".
+- Transforme a lista de documentos em um Checklist interativo (checkboxes HTML).
+
+PASSO 3 DA JORNADA: "Estrutura Técnica"
+- Coloque aqui o conteúdo da seção atual: "3. Bateria Mínima de Testes Psicológicos" e "4. Custos e Investimentos".
+- Formate a tabela de testes para ser visualmente agradável (Cards em vez de linhas de tabela).
+
+PASSO 4 DA JORNADA: "Clínica Aplicada"
+- Coloque aqui o conteúdo das seções atuais: "5. Características Psicológicas" e "6. Procedimentos da Avaliação".
+
+PASSO 5 DA JORNADA: "Autonomia Profissional"
+- Coloque aqui o conteúdo de "Dicas Práticas" e "Perguntas Frequentes (FAQ)".
+- Use um estilo de "Sanfona" (Details/Summary) para as perguntas frequentes.
+
+4. FUNCIONALIDADE
+- Certifique-se de que o CSS seja responsivo (funcione bem no celular).
+- Adicione um script simples para que, ao clicar no título da etapa da jornada, o conteúdo se expanda suavemente.
+
+O objetivo final é que o usuário veja a JORNADA primeiro, e só veja o texto denso quando decidir clicar para estudar aquele módulo.
+
+Mantenha todo o texto original, não apague informações, apenas reorganize dentro dessa nova estrutura visual.

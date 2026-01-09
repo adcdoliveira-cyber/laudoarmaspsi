@@ -1,1728 +1,383 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manual completo para psicólogos no Rio de Janeiro sobre laudos psicológicos para porte de armas">
-    <title>Manual Completo: Psicólogo no Rio de Janeiro - Laudos para Porte de Armas</title>
+    <meta name="description" content="Manual de Elite para Psicólogos - Domine Laudos de Armas e Lucre Mais">
+    <title>Jornada do Psicólogo Elite - Laudos de Armas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-      :root {
-        --primary-gold: #c5a059;
-        --secondary-gold: #e2c275;
-        --navy-dark: #0a192f;
-        --navy-light: #172a45;
-        --elegant-white: #fdfdfd;
-        --soft-gray: #ececec;
-        --text-gold: #d4af37;
-        --text-white: #ffffff;
-        --text-main: #333333;
-      }
-      
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: var(--elegant-white);
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-        line-height: 1.6;
-        color: var(--text-main);
-      }
-      
-      #document {
-        max-width: 1000px;
-        width: 95%;
-        margin: 3rem auto;
-        background: white;
-        color: var(--text-main);
-        position: relative;
-        border-radius: 12px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        overflow: hidden;
-      }
-
-      .hero-section {
-        display: flex;
-        align-items: center;
-        padding: 60px;
-        background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-light) 100%);
-        color: white;
-        border-bottom: 6px solid var(--primary-gold);
-        gap: 40px;
-      }
-
-      .hero-content {
-        flex: 1;
-      }
-
-      .hero-content h1 {
-        font-family: 'Playfair Display', serif;
-        color: var(--secondary-gold);
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-        text-align: left;
-        line-height: 1.3;
-        text-transform: none;
-      }
-
-      .hero-content p {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.2rem;
-        text-align: left;
-        margin-bottom: 0;
-        font-weight: 300;
-      }
-
-      /* Accordion Styles */
-      .accordion-item {
-        border-bottom: 1px solid var(--soft-gray);
-      }
-
-      .accordion-header {
-        width: 100%;
-        padding: 20px;
-        background: none;
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        text-align: left;
-        font-weight: 600;
-        color: var(--navy-dark);
-        font-size: 1.1rem;
-        transition: background 0.3s;
-      }
-
-      .accordion-header:hover {
-        background: rgba(197, 160, 89, 0.05);
-      }
-
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        background: white;
-      }
-
-      .accordion-content.active {
-        max-height: 1000px;
-        padding: 0 20px 20px;
-      }
-
-      /* Testimonials */
-      .testimonials-section {
-        padding: 50px;
-        background: var(--elegant-white);
-      }
-
-      .testimonial-card {
-        background: white;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-        border: 1px solid var(--soft-gray);
-        margin-bottom: 20px;
-        font-style: italic;
-        line-height: 1.8;
-      }
-
-      .testimonial-author {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
-        color: var(--navy-dark);
-        font-style: normal;
-      }
-
-      .journey-graphic {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .journey-step {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 12px 20px;
-        border-radius: 8px;
-        border-left: 4px solid var(--primary-gold);
-        transition: transform 0.3s;
-      }
-
-      .journey-step:hover {
-        transform: translateX(10px);
-        background: rgba(255, 255, 255, 0.15);
-      }
-
-      .step-number {
-        font-weight: bold;
-        color: var(--secondary-gold);
-        font-size: 1.4rem;
-        min-width: 30px;
-      }
-
-      .step-text {
-        font-size: 1.1rem;
-        font-weight: 500;
-      }
-
-      /* Target Audience Section */
-      .target-audience {
-        padding: 50px;
-        background: var(--elegant-white);
-        border-bottom: 1px solid var(--soft-gray);
-      }
-
-      .target-audience h2 {
-        text-align: center;
-        color: var(--navy-dark);
-        margin-bottom: 30px;
-        border: none;
-      }
-      
-      .target-audience h2::before { display: none; }
-
-      .audience-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-      }
-
-      .audience-card {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        text-align: center;
-        border: 1px solid var(--soft-gray);
-        transition: transform 0.3s;
-      }
-
-      .audience-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--primary-gold);
-      }
-
-      .audience-icon {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        display: block;
-      }
-
-      .audience-card h3 {
-        color: var(--navy-dark);
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-
-      .audience-card p {
-        font-size: 0.95rem;
-        color: #666;
-        text-align: center;
-        margin-bottom: 0;
-      }
-      
-      /* Journey Dashboard */
-      .journey-dashboard {
-        padding: 50px;
-        background: white;
-      }
-
-      .journey-dashboard h2 {
-        text-align: center;
-        color: var(--navy-dark);
-        margin-bottom: 40px;
-        border: none;
-      }
-      .journey-dashboard h2::before { display: none; }
-
-      .dashboard-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-      }
-
-      .module-card {
-        background: var(--elegant-white);
-        border: 1px solid var(--soft-gray);
-        border-radius: 15px;
-        padding: 30px;
-        position: relative;
-        transition: all 0.3s;
-        border-top: 5px solid var(--primary-gold);
-      }
-
-      .module-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-
-      .module-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 20px;
-      }
-
-      .module-icon {
-        font-size: 2rem;
-        background: white;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      }
-
-      .module-title {
-        color: var(--navy-dark);
-        font-weight: 700;
-        font-size: 1.25rem;
-      }
-
-      .module-status {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--primary-gold);
-        background: rgba(197, 160, 89, 0.1);
-        padding: 4px 10px;
-        border-radius: 20px;
-      }
-
-      /* Checklist Interactive */
-      .checklist-tool {
-        margin-top: 15px;
-        text-align: left;
-      }
-
-      .checklist-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 10px;
-        margin-bottom: 8px;
-        font-size: 0.9rem;
-        cursor: pointer;
-      }
-
-      .checklist-item input {
-        margin-top: 4px;
-      }
-
-      /* Test Cards */
-      .test-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin-top: 15px;
-      }
-
-      .test-mini-card {
-        background: white;
-        padding: 8px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        border: 1px solid var(--soft-gray);
-        text-align: center;
-      }
-
-      /* Simulation Tool */
-      .simulation-tool {
-        margin-top: 15px;
-        text-align: left;
-        background: white;
-        padding: 15px;
-        border-radius: 8px;
-        border: 1px solid var(--soft-gray);
-      }
-
-      .simulation-question {
-        font-weight: bold;
-        margin-bottom: 10px;
-        font-size: 0.95rem;
-      }
-
-      .simulation-option {
-        display: block;
-        width: 100%;
-        padding: 8px 12px;
-        margin-bottom: 8px;
-        background: var(--elegant-white);
-        border: 1px solid var(--soft-gray);
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: left;
-        font-size: 0.85rem;
-        transition: background 0.3s;
-      }
-
-      .simulation-option:hover {
-        background: var(--secondary-gold);
-        color: var(--navy-dark);
-      }
-
-      .simulation-feedback {
-        margin-top: 10px;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 0.85rem;
-        display: none;
-      }
-
-      /* Calculator Tool */
-      .calculator-tool {
-        margin-top: 15px;
-        text-align: left;
-      }
-
-      .calc-input-group {
-        margin-bottom: 12px;
-      }
-
-      .calc-input-group label {
-        display: block;
-        font-size: 0.85rem;
-        margin-bottom: 5px;
-        font-weight: 600;
-      }
-
-      .calc-input-group input {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid var(--soft-gray);
-        border-radius: 5px;
-      }
-
-      .calc-result {
-        margin-top: 15px;
-        padding: 15px;
-        background: var(--navy-dark);
-        color: white;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        border-left: 4px solid var(--primary-gold);
-      }
-
-      .cta-section {
-        padding: 60px 50px;
-        text-align: center;
-        background: white;
-        border-top: 1px solid var(--soft-gray);
-      }
-
-      .btn-primary {
-        background: var(--navy-dark);
-        color: white;
-        padding: 18px 35px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 15px rgba(10, 25, 47, 0.2);
-        display: inline-block;
-        text-decoration: none;
-      }
-
-      .btn-primary:hover {
-        background: var(--navy-light);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(10, 25, 47, 0.3);
-        color: var(--secondary-gold);
-      }
-
-      .guarantee-text {
-        display: block;
-        margin-top: 20px;
-        font-size: 0.9rem;
-        color: #666;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.5;
-      }
-
-      .inner {
-        padding: 50px;
-      }
-      
-      @media (max-width: 850px) {
-        .hero-section {
-          flex-direction: column;
-          padding: 40px 25px;
+        :root {
+            --bg-off-white: #F9FAFB;
+            --navy-petroleum: #2C3E50;
+            --green-moss: #27AE60;
+            --primary-gold: #c5a059;
+            --soft-gray: #E5E7EB;
+            --text-main: #374151;
+            --white: #FFFFFF;
         }
-        .inner {
-          padding: 25px;
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        .target-audience {
-          padding: 30px 20px;
+
+        body {
+            background-color: var(--bg-off-white);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
         }
-      }
 
-      h1, h2, h3, h4, h5 {
-        font-weight: 700;
-        text-align: center;
-      }
-      
-      h2 {
-        color: var(--navy-dark);
-        font-size: 2rem;
-        margin-top: 2.5rem;
-        border-bottom: 3px solid var(--primary-gold);
-        padding-bottom: 12px;
-        text-align: left;
-        display: flex;
-        align-items: center;
-      }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-      h2::before {
-        content: '';
-        display: inline-block;
-        width: 12px;
-        height: 35px;
-        background: var(--primary-gold);
-        margin-right: 15px;
-        border-radius: 2px;
-      }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy-petroleum) 0%, #1a252f 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 6px solid var(--green-moss);
+        }
 
-      h3 {
-        color: var(--primary-gold);
-        font-size: 1.6rem;
-        margin-top: 2rem;
-        text-align: left;
-      }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
 
-      .content-image {
-        width: 100%;
-        max-height: 450px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin: 30px 0;
-        border: 1px solid var(--soft-gray);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
 
-      p {
-        text-align: justify;
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-        color: #444;
-      }
-      
-      .toc {
-        background: var(--elegant-white);
-        padding: 35px;
-        border-radius: 15px;
-        border: 1px solid var(--primary-gold);
-        margin-bottom: 40px;
-        box-shadow: inset 0 0 15px rgba(197, 160, 89, 0.1);
-      }
+        .btn-cta {
+            background-color: var(--green-moss);
+            color: var(--white);
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+        }
 
-      .toc h2::before { display: none; }
-      .toc h2 { text-align: center; justify-content: center; border-bottom-style: dashed; }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            background-color: #219150;
+        }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 30px 0;
-        font-size: 1rem;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      }
-      
-      th {
-        background: var(--navy-dark);
-        color: var(--secondary-gold);
-        padding: 15px;
-        text-align: left;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-      }
-      
-      td {
-        border: 1px solid var(--soft-gray);
-        padding: 15px;
-        color: #555;
-      }
+        /* Timeline Journey */
+        .journey-section {
+            padding: 60px 0;
+        }
 
-      .executive-summary {
-        background: linear-gradient(to right, rgba(197, 160, 89, 0.15), rgba(255,255,255,0));
-        border-left: 6px solid var(--primary-gold);
-        padding: 30px;
-        margin: 30px 0;
-        border-radius: 0 12px 12px 0;
-        font-size: 1.2rem;
-        line-height: 1.8;
-      }
+        .journey-section h2 {
+            text-align: center;
+            color: var(--navy-petroleum);
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
 
-      ul, ol {
-        margin-bottom: 1.5rem;
-        padding-left: 25px;
-      }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-      li {
-        margin-bottom: 0.8rem;
-        color: #444;
-      }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--soft-gray);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
 
-      a {
-        color: var(--navy-light);
-        text-decoration: none;
-        transition: all 0.3s;
-        font-weight: 600;
-      }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
 
-      a:hover {
-        color: var(--primary-gold);
-        padding-left: 5px;
-      }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--white);
+            border: 4px solid var(--green-moss);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
 
-      .highlight-box {
-        background: var(--navy-dark);
-        color: var(--text-white);
-        padding: 25px;
-        border-radius: 12px;
-        margin: 25px 0;
-        border-right: 8px solid var(--primary-gold);
-      }
+        .left { left: 0; }
+        .right { left: 50%; }
 
-      .highlight-box h3 { color: var(--secondary-gold); margin-top: 0; }
+        .right::after { left: -10px; }
+
+        .content-box {
+            padding: 20px;
+            background-color: var(--white);
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--soft-gray);
+        }
+
+        .content-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--green-moss);
+        }
+
+        .content-box h3 {
+            color: var(--navy-petroleum);
+            margin-bottom: 10px;
+        }
+
+        .module-content {
+            display: none;
+            padding: 20px 0 0 0;
+            border-top: 1px solid var(--soft-gray);
+            margin-top: 15px;
+            text-align: justify;
+            font-size: 0.95rem;
+        }
+
+        .module-content.active {
+            display: block;
+        }
+
+        /* Specific Elements */
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .test-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .test-card {
+            background: var(--bg-off-white);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--soft-gray);
+            font-size: 0.85rem;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid var(--soft-gray);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 15px;
+            background: var(--white);
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+        }
+
+        .faq-item[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 15px;
+            background: var(--bg-off-white);
+            border-top: 1px solid var(--soft-gray);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after { left: 31px; }
+            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-item::after { left: 21px; }
+            .right { left: 0%; }
+            .hero h1 { font-size: 1.8rem; }
+        }
     </style>
-  </head>
-  <body>
-    <div id="document">
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1>Uma formação que organiza, sustenta e dá segurança para sua atuação com laudos psicológicos.</h1>
-          <p>Da legislação à prática clínica: o caminho definitivo para o seu sucesso profissional no Rio de Janeiro.</p>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Uma formação que organiza, sustenta e dá segurança para sua atuação com laudos psicológicos.</h1>
+            <p>Da legislação à prática clínica, sem improviso, sem promessas vazias e sem violência com a sua ética.</p>
+            <a href="#" class="btn-cta">Quero iniciar minha jornada com segurança</a>
         </div>
-        <div class="journey-graphic">
-          <div class="journey-step">
-            <span class="step-number">1</span>
-            <span class="step-text">Clareza</span>
-          </div>
-          <div class="journey-step">
-            <span class="step-number">2</span>
-            <span class="step-text">Legislação</span>
-          </div>
-          <div class="journey-step">
-            <span class="step-number">3</span>
-            <span class="step-text">Técnica</span>
-          </div>
-          <div class="journey-step">
-            <span class="step-number">4</span>
-            <span class="step-text">Clínica</span>
-          </div>
-          <div class="journey-step">
-            <span class="step-number">5</span>
-            <span class="step-text">Autonomia</span>
-          </div>
-        </div>
-      </section>
+    </header>
 
-      <section class="target-audience">
-        <h2>Para quem é esta formação?</h2>
-        <div class="audience-grid">
-          <div class="audience-card">
-            <span class="audience-icon">🛡️</span>
-            <h3>Medo de Errar</h3>
-            <p>Para quem busca segurança técnica e jurídica para assinar seus laudos sem receios.</p>
-          </div>
-          <div class="audience-card">
-            <span class="audience-icon">🧭</span>
-            <h3>Sente-se Confuso</h3>
-            <p>Para quem está perdido na montanha de legislações e quer um passo a passo claro.</p>
-          </div>
-          <div class="audience-card">
-            <span class="audience-icon">📈</span>
-            <h3>Busca Crescimento</h3>
-            <p>Para psicólogos que desejam diversificar sua atuação e aumentar sua lucratividade.</p>
-          </div>
-        </div>
-      </section>
+    <main class="container">
+        <section class="journey-section">
+            <h2>Sua Jornada de Excelência</h2>
+            <div class="timeline">
+                
+                <!-- PASSO 1 -->
+                <div class="timeline-item left">
+                    <div class="content-box" onclick="toggleModule(this)">
+                        <h3>💡 PASSO 1: Clareza e Campo de Atuação</h3>
+                        <p>Fundamentos, mercado e o que você precisa saber antes de começar.</p>
+                        <div class="module-content">
+                            <h4>Resumo Executivo</h4>
+                            <p>Este guia orienta psicólogos do Rio de Janeiro a iniciarem atuação com laudos psicológicos para porte e registro de armas de fogo, abrangendo credenciamento na Polícia Federal, custos, testes necessários, legislação e prática profissional.</p>
+                            <br>
+                            <h4>1. Introdução ao Mercado</h4>
+                            <p>A avaliação psicológica para manuseio de arma de fogo é exigida pela Lei nº 10.826/2003 (Estatuto do Desarmamento) e regulamentada por dispositivos específicos que determinam o modo de atuação do psicólogo.</p>
+                            <p>Objetivo da avaliação: verificar se o candidato possui características psicológicas e cognitivas adequadas para manusear arma de fogo com segurança, considerando dimensões emocionais, cognitivas, de personalidade e de julgamento crítico.</p>
+                        </div>
+                    </div>
+                </div>
 
-      <section class="journey-dashboard">
-        <h2>Mapa da Sua Jornada</h2>
-        <div class="dashboard-grid">
-          <!-- Módulo 1 -->
-          <div class="module-card">
-            <span class="module-status">Aberto</span>
-            <div class="module-header">
-              <div class="module-icon">💡</div>
-              <div class="module-title">Etapa 1: Clareza</div>
-            </div>
-            <p>Fundamentos da perícia e mentalidade de sucesso.</p>
-          </div>
+                <!-- PASSO 2 -->
+                <div class="timeline-item right">
+                    <div class="content-box" onclick="toggleModule(this)">
+                        <h3>⚖️ PASSO 2: Legislação sem Confusão</h3>
+                        <p>Requisitos de credenciamento e checklist de documentos necessários.</p>
+                        <div class="module-content">
+                            <h4>Requisitos para Credenciamento na Polícia Federal</h4>
+                            <p>Para atuar formalmente junto à Polícia Federal, o psicólogo precisa atender aos seguintes requisitos:</p>
+                            <div class="checklist">
+                                <label class="checklist-item"><input type="checkbox"> Inscrição ativa no CRP-RJ</label>
+                                <label class="checklist-item"><input type="checkbox"> Mínimo de 2 anos de exercício profissional</label>
+                                <label class="checklist-item"><input type="checkbox"> Certidão Negativa de Infrações Éticas</label>
+                                <label class="checklist-item"><input type="checkbox"> Certificado de aptidão para testes projetivos/expressivos</label>
+                                <label class="checklist-item"><input type="checkbox"> Certidões Negativas (Justiça Federal, Estadual, Militar, Eleitoral)</label>
+                                <label class="checklist-item"><input type="checkbox"> Alvará de localização e funcionamento</label>
+                                <label class="checklist-item"><input type="checkbox"> Alvará da Vigilância Sanitária</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Módulo 2 -->
-          <div class="module-card">
-            <span class="module-status">Interativo</span>
-            <div class="module-header">
-              <div class="module-icon">⚖️</div>
-              <div class="module-title">Etapa 2: Legislação</div>
-            </div>
-            <div class="checklist-tool">
-              <strong>Checklist de Documentos:</strong>
-              <label class="checklist-item"><input type="checkbox"> Inscrição CRP-RJ</label>
-              <label class="checklist-item"><input type="checkbox"> 2 anos de experiência</label>
-              <label class="checklist-item"><input type="checkbox"> Certidões Negativas</label>
-            </div>
-          </div>
+                <!-- PASSO 3 -->
+                <div class="timeline-item left">
+                    <div class="content-box" onclick="toggleModule(this)">
+                        <h3>🧱 PASSO 3: Estrutura Técnica</h3>
+                        <p>Bateria de testes, custos e investimentos para sua clínica.</p>
+                        <div class="module-content">
+                            <h4>Bateria Mínima de Testes Psicológicos</h4>
+                            <div class="test-card-grid">
+                                <div class="test-card"><strong>Projetivos</strong><br>Palográfico, Zulliger, Rorschach</div>
+                                <div class="test-card"><strong>Expressivos</strong><br>Pfister, HTP</div>
+                                <div class="test-card"><strong>Memória</strong><br>TMV, RAVLT</div>
+                                <div class="test-card"><strong>Atenção</strong><br>AC, AD, ROTAS-2</div>
+                                <div class="test-card"><strong>Inteligência</strong><br>WASI, R-1, BPR-5</div>
+                            </div>
+                            <br>
+                            <h4>Custos e Investimentos</h4>
+                            <p>O credenciamento na PF é gratuito. O investimento principal será em cursos de capacitação (R$ 500 - R$ 3.500) e materiais de testes (R$ 25 - R$ 700 por bloco/coleção).</p>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Módulo 3 -->
-          <div class="module-card">
-            <span class="module-status">Técnica</span>
-            <div class="module-header">
-              <div class="module-icon">🧱</div>
-              <div class="module-title">Etapa 3: Estrutura</div>
-            </div>
-            <div class="test-grid">
-              <div class="test-mini-card">Palográfico</div>
-              <div class="test-mini-card">Pfister</div>
-              <div class="test-mini-card">Zulliger</div>
-              <div class="test-mini-card">HTP</div>
-            </div>
-          </div>
+                <!-- PASSO 4 -->
+                <div class="timeline-item right">
+                    <div class="content-box" onclick="toggleModule(this)">
+                        <h3>🧠 PASSO 4: Clínica Aplicada</h3>
+                        <p>Características psicológicas avaliadas e procedimentos práticos.</p>
+                        <div class="module-content">
+                            <h4>Características Psicológicas Avaliadas</h4>
+                            <p>A avaliação foca em: regulação emocional, controle de impulsos, agressividade sob controle, atenção concentrada e julgamento crítico.</p>
+                            <br>
+                            <h4>Procedimentos da Avaliação</h4>
+                            <p>O processo deve incluir obrigatoriamente: entrevista semiestruturada (com situações-problema), aplicação dos testes selecionados e elaboração do laudo fundamentado.</p>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Módulo 4 -->
-          <div class="module-card">
-            <span class="module-status">Simulador</span>
-            <div class="module-header">
-              <div class="module-icon">🧠</div>
-              <div class="module-title">Etapa 4: Clínica</div>
-            </div>
-            <div class="simulation-tool">
-              <div class="simulation-question">O paciente relatou que está sob forte estresse no trabalho. O que você pergunta agora?</div>
-              <button class="simulation-option" onclick="showFeedback('correct')">A) Como você lida com situações de conflito sob estresse?</button>
-              <button class="simulation-option" onclick="showFeedback('wrong')">B) Você já pensou em usar a arma contra seus colegas?</button>
-              <div id="sim-feedback" class="simulation-feedback"></div>
-            </div>
-          </div>
+                <!-- PASSO 5 -->
+                <div class="timeline-item left">
+                    <div class="content-box" onclick="toggleModule(this)">
+                        <h3>🚀 PASSO 5: Autonomia Profissional</h3>
+                        <p>Dicas práticas e as dúvidas mais frequentes dos colegas.</p>
+                        <div class="module-content">
+                            <h4>Dicas Práticas</h4>
+                            <p>Mantenha sempre seu consultório organizado, siga rigorosamente os manuais dos testes e mantenha-se atualizado com as resoluções do CFP e normativas da PF.</p>
+                            <br>
+                            <h4>Perguntas Frequentes (FAQ)</h4>
+                            <details class="faq-item">
+                                <summary>Preciso de quanto tempo de CRP?</summary>
+                                <div class="faq-content">No mínimo 2 anos de exercício profissional comprovado.</div>
+                            </details>
+                            <details class="faq-item">
+                                <summary>O credenciamento tem custo?</summary>
+                                <div class="faq-content">Não, o credenciamento na Polícia Federal é gratuito.</div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Módulo 5 -->
-          <div class="module-card">
-            <span class="module-status">Calculadora</span>
-            <div class="module-header">
-              <div class="module-icon">🚀</div>
-              <div class="module-title">Etapa 5: Autonomia</div>
             </div>
-            <div class="calculator-tool">
-              <div class="calc-input-group">
-                <label>Laudos por mês:</label>
-                <input type="number" id="laudos-mes" value="2" oninput="calculatePlan()">
-              </div>
-              <div class="calc-input-group">
-                <label>Valor por laudo (R$):</label>
-                <input type="number" id="valor-laudo" value="500" oninput="calculatePlan()">
-              </div>
-              <div id="calc-result" class="calc-result">
-                Atendendo 2 pacientes por mês, você gera R$ 1.000,00 e paga seu investimento rapidamente mantendo sua ética intacta.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="testimonials-section">
-        <h2 style="text-align: center; color: var(--navy-dark); margin-bottom: 40px; border: none;">O que dizem os colegas</h2>
-        <div class="testimonial-card">
-          "A clareza técnica que essa formação proporciona é incrível. Finalmente sinto segurança para assinar meus laudos no RJ."
-          <span class="testimonial-author">— Dr. Ricardo S., Psicólogo Clínico</span>
-        </div>
-      </section>
+        <section style="text-align: center; padding: 40px; background: white; border-radius: 12px; margin-top: 40px; border: 1px solid var(--soft-gray);">
+            <h2 style="margin-bottom: 20px; color: var(--navy-petroleum);">Pronta para dar o próximo passo?</h2>
+            <p style="margin-bottom: 30px;">Garantia incondicional de 7 dias. Se a metodologia não fizer sentido para sua clínica, devolvemos o investimento.</p>
+            <a href="#" class="btn-cta">Inscrever-me Agora</a>
+        </section>
+    </main>
 
-      <section class="pdf-section" style="padding: 50px;">
-        <h2 style="text-align: center; color: var(--navy-dark); margin-bottom: 40px; border: none;">Perguntas Frequentes</h2>
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            Preciso de quanto tempo de CRP para atuar?
-            <span>+</span>
-          </button>
-          <div class="accordion-content">
-            <p>De acordo com a Instrução Normativa da Polícia Federal, é necessário no mínimo 2 anos de exercício profissional comprovado.</p>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            O credenciamento na PF tem algum custo?
-            <span>+</span>
-          </button>
-          <div class="accordion-content">
-            <p>Não, o credenciamento inicial e as renovações periódicas (a cada 4 anos) junto à Polícia Federal são gratuitos.</p>
-          </div>
-        </div>
-      </section>
+    <footer>
+        <p>&copy; 2025 Jornada do Psicólogo Elite - Rio de Janeiro</p>
+    </footer>
 
-      <script>
-        function toggleAccordion(header) {
-          const content = header.nextElementSibling;
-          const isActive = content.classList.contains('active');
-          
-          // Close all other accordions
-          document.querySelectorAll('.accordion-content').forEach(c => {
-            c.classList.remove('active');
-            c.previousElementSibling.querySelector('span').innerText = '+';
-          });
-          
-          if (!isActive) {
-            content.classList.add('active');
-            header.querySelector('span').innerText = '-';
-          }
+    <script>
+        function toggleModule(element) {
+            const content = element.querySelector('.module-content');
+            const isActive = content.classList.contains('active');
+            
+            // Fecha todos os outros se quiser um estilo sanfona
+            // document.querySelectorAll('.module-content').forEach(c => c.classList.remove('active'));
+            
+            if (isActive) {
+                content.classList.remove('active');
+            } else {
+                content.classList.add('active');
+            }
         }
-
-        function showFeedback(type) {
-          const fb = document.getElementById('sim-feedback');
-          fb.style.display = 'block';
-          if (type === 'correct') {
-            fb.style.backgroundColor = 'rgba(74, 124, 89, 0.2)';
-            fb.style.color = '#4a7c59';
-            fb.innerHTML = '<strong>Excelente!</strong> Essa abordagem investiga a regulação emocional sem gerar defesa imediata.';
-          } else {
-            fb.style.backgroundColor = 'rgba(198, 109, 66, 0.2)';
-            fb.style.color = '#c66d42';
-            fb.innerHTML = '<strong>Cuidado:</strong> Essa pergunta pode ser muito direta e gerar defesa. O melhor seria investigar a regulação emocional primeiro.';
-          }
-        }
-
-        function calculatePlan() {
-          const n = document.getElementById('laudos-mes').value;
-          const v = document.getElementById('valor-laudo').value;
-          const total = n * v;
-          document.getElementById('calc-result').innerHTML = `Atendendo ${n} pacientes por mês, você gera R$ ${total.toLocaleString('pt-BR')} e paga seu investimento rapidamente mantendo sua ética intacta.`;
-        }
-      </script>
-
-      <section class="cta-section">
-        <a href="#" class="btn-primary">Quero iniciar minha jornada com segurança</a>
-        <span class="guarantee-text">
-          🛡️ <strong>Garantia incondicional de 7 dias.</strong><br>
-          Se a metodologia não fizer sentido para sua clínica, devolvemos o investimento. Sem perguntas.
-        </span>
-      </section>
-
-      <div class="inner">
-        <!-- CAPA -->
-        <section class="pdf-section">
-          <h2 style="text-align: center; color: var(--navy-dark); border: none; margin-top: 0;">Manual de Elite para Psicólogos:<br>Domine Laudos de Armas e Lucre Mais</h2>
-          <p style="text-align: center; margin-top: 10mm; font-size: 1.4rem; color: var(--primary-gold);">
-            <strong>Transforme sua Carreira Clínica com Ética, Elegância e Lucratividade</strong>
-          </p>
-          <p style="text-align: center; margin-top: 5mm; font-weight: 300;">
-            Referência completa para o Estado do Rio de Janeiro
-          </p>
-        </section>
-
-        <!-- SUMÁRIO -->
-        <section class="pdf-section page-break">
-          <div class="toc">
-            <h2>Sumário</h2>
-            <ol>
-              <li><a href="#sec1">Resumo Executivo</a></li>
-              <li><a href="#sec2">Introdução</a></li>
-              <li><a href="#sec3">Requisitos para Credenciamento na Polícia Federal</a></li>
-              <li><a href="#sec4">Bateria Mínima de Testes Psicológicos</a></li>
-              <li><a href="#sec5">Custos e Investimentos</a></li>
-            </ol>
-          </div>
-        </section>
-
-        <!-- RESUMO EXECUTIVO -->
-        <section class="pdf-section page-break">
-          <h2 id="sec1">Resumo Executivo para o Sucesso</h2>
-          <div class="executive-summary">
-            <p>
-              Aprenda como se destacar no mercado de laudos psicológicos para armas de fogo. Este manual exclusivo revela o caminho para o credenciamento na Polícia Federal, as melhores práticas éticas e como transformar esta especialidade em uma fonte sólida de receita para sua clínica no Rio de Janeiro.
-            </p>
-          </div>
-          <img src="attached_assets/stock_images/psychological_evalua_2dba55a0.jpg" alt="Elegância e Sucesso" class="content-image">
-        </section>
-
-        <!-- 1. INTRODUÇÃO -->
-        <section class="pdf-section page-break">
-          <h2 id="sec2">1. Introdução ao Mercado</h2>
-          <div class="highlight-box">
-            <h3>Oportunidade de Crescimento</h3>
-            <p>O setor de avaliação psicológica para manuseio de armas cresce anualmente. Domine a técnica e posicione-se como autoridade.</p>
-          </div>
-          <p>
-            A avaliação psicológica para manuseio de arma de fogo é regida pela <strong>Lei nº 10.826/2003</strong>. Mais do que uma exigência legal, é uma oportunidade para o psicólogo exercer sua perícia com excelência técnica e remuneração diferenciada.
-          </p>
-          <p>
-            Em âmbito profissional e normativo, destacam-se:
-          </p>
-          <ul>
-            <li><strong>Resolução CFP nº 01/2022</strong>: Dispõe sobre os procedimentos técnicos da avaliação psicológica, incluindo diretrizes específicas para porte e registro de arma de fogo.</li>
-            <li><strong>Instrução Normativa PF nº 78/2014</strong>: Regulamenta o credenciamento e a fiscalização pela Polícia Federal de psicólogos habilitados a emitir laudos de aptidão psicológica para manuseio de arma de fogo.</li>
-          </ul>
-          <p>
-            <strong>Objetivo da avaliação</strong>: verificar se o candidato possui características psicológicas e cognitivas adequadas para manusear arma de fogo com segurança, considerando dimensões emocionais, cognitivas, de personalidade e de julgamento crítico, com foco na proteção da vida e na prevenção de riscos.
-          </p>
-        </section>
-
-        <!-- 2. REQUISITOS PARA CREDENCIAMENTO NA POLÍCIA FEDERAL -->
-        <section class="pdf-section page-break">
-          <h2 id="sec3">2. Requisitos para Credenciamento na Polícia Federal</h2>
-          <img src="attached_assets/stock_images/psychological_evalua_83b4853c.jpg" alt="Documentação" class="content-image">
-          <h3>2.1. Requisitos Básicos</h3>
-          <p>Para atuar formalmente com laudos de aptidão psicológica para porte e registro de arma de fogo junto à Polícia Federal, o psicólogo precisa atender, no mínimo, aos seguintes requisitos:</p>
-          <ul>
-            <li><strong>Inscrição ativa no CRP-RJ</strong> (Conselho Regional de Psicologia do Rio de Janeiro).</li>
-            <li><strong>Mínimo de 2 anos de exercício profissional</strong> comprovado.</li>
-            <li><strong>Certidão Negativa de Infrações Éticas</strong> emitida pelo CRP-RJ.</li>
-            <li><strong>Certificado de aptidão</strong> para aplicação de testes projetivos e expressivos, emitido por instituições reconhecidas.</li>
-          </ul>
-
-          <h3>2.2. Documentação Necessária</h3>
-
-          <p><strong>Documentos Pessoais:</strong></p>
-          <ul>
-            <li>Foto 3x4 recente.</li>
-            <li>RG e CPF (original e cópia autenticada).</li>
-            <li>Comprovante de inscrição ativa no CRP-RJ.</li>
-            <li>Certidão negativa de infrações éticas do CRP.</li>
-          </ul>
-
-          <p><strong>Certidões Negativas de Antecedentes:</strong></p>
-          <ul>
-            <li>Justiça Federal.</li>
-            <li>Justiça Estadual (RJ).</li>
-            <li>Justiça Militar.</li>
-            <li>Justiça Eleitoral.</li>
-          </ul>
-
-          <p><strong>Comprovação Técnica:</strong></p>
-          <ul>
-            <li>Certificado de conclusão de curso de capacitação em avaliação psicológica para porte de arma.</li>
-            <li>Certificado de aptidão para testes projetivos (ex.: Palográfico, Zulliger).</li>
-            <li>Certificado de aptidão para testes expressivos (ex.: Pfister).</li>
-          </ul>
-
-          <p><strong>Infraestrutura:</strong></p>
-          <ul>
-            <li>Fotos da sala de avaliação (iluminação, ventilação, privacidade).</li>
-            <li>Planta baixa ou croquis do consultório.</li>
-            <li>Alvará de localização e funcionamento.</li>
-            <li>Alvará da Vigilância Sanitária.</li>
-          </ul>
-
-          <p><strong>Declaração:</strong></p>
-          <ul>
-            <li>Declaração de não responder a inquérito ou processo criminal (exceto culposos ou com reabilitação).</li>
-          </ul>
-
-          <h3>2.3. Como Solicitar Credenciamento</h3>
-
-          <p><strong>Via Portal Gov.br:</strong></p>
-          <ol>
-            <li>Acesse: <a href="https://www.gov.br/pt-br/servicos/credenciar-psicologo-para-emissao-de-comprovante-de-aptidao-psicologica-para-manuseio-de-armas-de-fogo">https://www.gov.br/pt-br/servicos/credenciar-psicologo-para-emissao-de-comprovante-de-aptidao-psicologica-para-manuseio-de-armas-de-fogo</a>.</li>
-            <li>Faça login com sua conta Gov.br.</li>
-            <li>Preencha o requerimento online.</li>
-            <li>Anexe todos os documentos digitalizados.</li>
-            <li>Aguarde análise (prazo variável).</li>
-          </ol>
-
-          <p><strong>Presencialmente:</strong></p>
-          <p>
-            É possível comparecer à Superintendência Regional da Polícia Federal no Rio de Janeiro com toda a documentação exigida, seguindo orientações atualizadas no site oficial da PF.
-          </p>
-
-          <p><strong>Validade do Credenciamento:</strong> 4 anos, renovável por igual período.</p>
-        </section>
-
-        <!-- 3. BATERIA MÍNIMA DE TESTES PSICOLÓGICOS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec4">3. Bateria Mínima de Testes Psicológicos</h2>
-          <img src="attached_assets/stock_images/psychological_evalua_73458ce5.jpg" alt="Avaliação" class="content-image">
-          <h3>3.1. Testes Obrigatórios (IN PF 78/2014 e Resolução CFP 01/2022)</h3>
-          <p>
-            A avaliação para porte ou registro de arma de fogo exige a utilização de uma bateria mínima de testes, contemplando dimensões de personalidade, aspectos emocionais, memória, atenção, inteligência e entrevista clínica.
-          </p>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Categoria</th>
-                <th>Testes</th>
-                <th>Observações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>1. Teste Projetivo</strong></td>
-                <td>Palográfico, Zulliger, Rorschach</td>
-                <td>Avaliam personalidade.</td>
-              </tr>
-              <tr>
-                <td><strong>2. Teste Expressivo</strong></td>
-                <td>Pfister (Pirâmides Coloridas), HTP</td>
-                <td>Avaliam aspectos emocionais.</td>
-              </tr>
-              <tr>
-                <td><strong>3. Teste de Memória</strong></td>
-                <td>Teste de Memória Visual (TMV), RAVLT</td>
-                <td>Memória de curto e longo prazo.</td>
-              </tr>
-              <tr>
-                <td><strong>4. Teste de Atenção</strong></td>
-                <td>AC (Atenção Concentrada), AD (Atenção Dividida), ROTAS-2, BDA</td>
-                <td>Atenção concentrada e difusa.</td>
-              </tr>
-              <tr>
-                <td><strong>5. Teste de Inteligência</strong></td>
-                <td>WASI, R-1, R-2, G-38, BPR-5</td>
-                <td>Nível intelectual (conforme CFP 01/2022).</td>
-              </tr>
-              <tr>
-                <td><strong>6. Entrevista Semiestruturada</strong></td>
-                <td>Elaborada pelo psicólogo</td>
-                <td>Deve incluir situações-problema envolvendo armas.</td>
-              </tr>
-            </tbody>
-          </table>
-          <caption class="small-text">Tabela 1: Bateria mínima de testes psicológicos para avaliação de porte/registro de arma de fogo.</caption>
-
-          <h3>3.2. Testes Aprovados pelo SATEPSI</h3>
-          <p>
-            A escolha dos instrumentos deve obrigatoriamente recair sobre testes com parecer <strong>FAVORÁVEL</strong> no <strong>SATEPSI</strong> (Sistema de Avaliação de Testes Psicológicos).
-          </p>
-          <p>
-            Consulte a lista atualizada em:
-          </p>
-          <ul>
-            <li><a href="https://satepsi.cfp.org.br/testesfavoraveis.cfm">https://satepsi.cfp.org.br/testesfavoraveis.cfm</a></li>
-          </ul>
-          <p><strong>Atenção:</strong> utilize somente instrumentos vigentes e favoráveis; o uso de testes desfavoráveis ou desatualizados pode configurar infração ética.</p>
-
-          <h3>3.3. Exemplos de Baterias Completas</h3>
-
-          <p><strong>Bateria 1 (mais comum):</strong></p>
-          <ol>
-            <li>Palográfico (projetivo)</li>
-            <li>Pfister (expressivo)</li>
-            <li>AC – Atenção Concentrada (atenção)</li>
-            <li>TMV – Teste de Memória Visual (memória)</li>
-            <li>R-1 (inteligência)</li>
-            <li>Entrevista com situações-problema</li>
-          </ol>
-
-          <p><strong>Bateria 2 (alternativa):</strong></p>
-          <ol>
-            <li>Zulliger (projetivo)</li>
-            <li>HTP (expressivo)</li>
-            <li>ROTAS-2 (atenção)</li>
-            <li>RAVLT (memória)</li>
-            <li>WASI (inteligência)</li>
-            <li>Entrevista com situações-problema</li>
-          </ol>
-        </section>
-
-        <!-- 5. CONCLUSÃO -->
-        <section class="pdf-section page-break">
-          <h2 id="sec5">5. Próximos Passos para sua Evolução</h2>
-          <img src="attached_assets/stock_images/psychological_evalua_2dba55a0.jpg" alt="Conclusão e Carreira" class="content-image">
-          <div class="highlight-box">
-            <h3>Comece Hoje Mesmo</h3>
-            <p>A excelência nos laudos é o diferencial que separa os profissionais comuns dos especialistas de elite. Invista em sua formação e colha os frutos de uma carreira valorizada.</p>
-          </div>
-        </section>
-          <p><strong>Taxas da Polícia Federal:</strong></p>
-          <ul>
-            <li>Credenciamento inicial: <strong>GRATUITO</strong>.</li>
-            <li>Renovação (a cada 4 anos): <strong>GRATUITO</strong>.</li>
-          </ul>
-
-          <h3>4.2. Cursos de Capacitação</h3>
-          <p><strong>Cursos online (EAD):</strong></p>
-          <ul>
-            <li>Curso básico (40h): R$ 500,00 a R$ 1.690,00.</li>
-            <li>Combo completo (com supervisão): R$ 543,00 a R$ 1.200,00.</li>
-          </ul>
-
-          <p><strong>Cursos presenciais:</strong></p>
-          <ul>
-            <li>Presencial + supervisão: R$ 1.500,00 a R$ 3.500,00.</li>
-          </ul>
-
-          <p><strong>Principais instituições (valores de referência):</strong></p>
-          <ul>
-            <li>CICLO CEAP: R$ 1.690,00 (40h EAD).</li>
-            <li>IPOG: consultar valores atualizados.</li>
-            <li>Experts Cursos: R$ 537,30 (promoção).</li>
-            <li>Psicologus: R$ 543,20 (combo EAD).</li>
-            <li>Grupo Desenvolver: consultar.</li>
-            <li>Portal DET: consultar.</li>
-          </ul>
-
-          <p><strong>Supervisão de testes projetivos e expressivos:</strong></p>
-          <ul>
-            <li>Palográfico + supervisão: R$ 700,00 a R$ 1.500,00.</li>
-            <li>Zulliger + supervisão: R$ 700,00 a R$ 1.500,00.</li>
-            <li>Pfister + supervisão: R$ 700,00 a R$ 1.200,00.</li>
-          </ul>
-
-          <h3>4.3. Testes Psicológicos (Material)</h3>
-          <p>Preços médios (Vetor Editora, Hogrefe, Casa do Psicólogo e outros fornecedores):</p>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Teste</th>
-                <th>Tipo</th>
-                <th>Preço aproximado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>AC – Atenção Concentrada</strong></td>
-                <td>Coleção (25 aplicações)</td>
-                <td>R$ 280,00 a R$ 350,00</td>
-              </tr>
-              <tr>
-                <td><strong>Palográfico</strong></td>
-                <td>Bloco (25 folhas)</td>
-                <td>R$ 25,00 a R$ 40,00</td>
-              </tr>
-              <tr>
-                <td><strong>Pfister (Pirâmides)</strong></td>
-                <td>Bloco (25 folhas)</td>
-                <td>R$ 37,00 a R$ 50,00</td>
-              </tr>
-              <tr>
-                <td><strong>Zulliger</strong></td>
-                <td>Pranchas + manual</td>
-                <td>R$ 250,00 a R$ 400,00</td>
-              </tr>
-              <tr>
-                <td><strong>ROTAS-2</strong></td>
-                <td>Bateria completa</td>
-                <td>R$ 400,00 a R$ 600,00</td>
-              </tr>
-              <tr>
-                <td><strong>BDA – Bateria Atenção</strong></td>
-                <td>Bateria completa</td>
-                <td>R$ 500,00 a R$ 700,00</td>
-              </tr>
-              <tr>
-                <td><strong>R-1 (Inteligência)</strong></td>
-                <td>Coleção</td>
-                <td>R$ 350,00 a R$ 500,00</td>
-              </tr>
-              <tr>
-                <td><strong>TMV – Memória Visual</strong></td>
-                <td>Coleção</td>
-                <td>R$ 300,00 a R$ 450,00</td>
-              </tr>
-            </tbody>
-          </table>
-          <caption class="small-text">Tabela 2: Investimento médio em materiais de testes psicológicos.</caption>
-
-          <p><strong>Investimento inicial em testes (bateria completa):</strong> aproximadamente R$ 2.000,00 a R$ 3.500,00.</p>
-
-          <h3>4.4. Infraestrutura do Consultório</h3>
-          <ul>
-            <li>Sala de espera: R$ 0,00 (pode ser compartilhada).</li>
-            <li>Sala de aplicação individual (mínimo de 4 m²): R$ 0,00 (se já existir estrutura física).</li>
-            <li>Mobiliário adequado (mesa, cadeiras, armário): R$ 500,00 a R$ 2.000,00.</li>
-            <li>Alvará de funcionamento: R$ 200,00 a R$ 500,00 (varia conforme o município no RJ).</li>
-            <li>Alvará sanitário: R$ 100,00 a R$ 300,00.</li>
-          </ul>
-
-          <h3>4.5. Valor do Laudo Psicológico</h3>
-          <p><strong>Referência FENAPSI/CFP (maio/2024):</strong></p>
-          <ul>
-            <li>Valor mínimo: <strong>R$ 396,73</strong>.</li>
-            <li>Valor médio: <strong>R$ 661,22</strong>.</li>
-            <li>Valor máximo: <strong>R$ 925,70</strong>.</li>
-          </ul>
-
-          <p><strong>Mercado no Rio de Janeiro (2026):</strong> valores praticados geralmente entre <strong>R$ 400,00 e R$ 600,00</strong> por laudo.</p>
-
-          <p><strong>Taxas do candidato perante a Polícia Federal (referência):</strong></p>
-          <ul>
-            <li>Registro de arma: R$ 88,00.</li>
-            <li>Expedição/renovação de porte federal: R$ 1.466,68.</li>
-          </ul>
-
-          <h3>4.6. Resumo do Investimento Total</h3>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Valor</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Cursos de capacitação</td>
-                <td>R$ 1.500,00 a R$ 4.000,00</td>
-              </tr>
-              <tr>
-                <td>Testes psicológicos</td>
-                <td>R$ 2.000,00 a R$ 3.500,00</td>
-              </tr>
-              <tr>
-                <td>Infraestrutura/alvarás</td>
-                <td>R$ 800,00 a R$ 3.000,00</td>
-              </tr>
-              <tr>
-                <td><strong>TOTAL INICIAL</strong></td>
-                <td><strong>R$ 4.300,00 a R$ 10.500,00</strong></td>
-              </tr>
-            </tbody>
-          </table>
-          <caption class="small-text">Tabela 3: Faixa estimada de investimento para início da atuação.</caption>
-
-          <p><strong>Retorno do investimento (estimativas):</strong></p>
-          <ul>
-            <li>Com 10 laudos emitidos: faturamento de R$ 4.000,00 a R$ 6.000,00.</li>
-            <li>Tempo médio de retorno: entre 2 e 5 meses de atuação, a depender da demanda.</li>
-          </ul>
-        </section>
-
-        <!-- 5. CARACTERÍSTICAS PSICOLÓGICAS AVALIADAS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec6">5. Características Psicológicas Avaliadas</h2>
-
-          <h3>5.1. Aspectos Cognitivos</h3>
-          <p>Na avaliação para porte ou registro de arma de fogo, é obrigatória a análise dos seguintes aspectos cognitivos:</p>
-          <ul>
-            <li><strong>Atenção</strong>: concentrada, difusa, alternada e dividida.</li>
-            <li><strong>Memória</strong>: memória de curto prazo e memória operacional.</li>
-            <li><strong>Funções Executivas</strong>: controle inibitório, planejamento, flexibilidade cognitiva e tomada de decisão.</li>
-            <li><strong>Nível Intelectual</strong>: candidatos com desempenho em zona limítrofe ou inferior devem, em geral, ser considerados <strong>INAPTOS</strong>, conforme critérios técnicos.</li>
-          </ul>
-
-          <h3>5.2. Traços de Personalidade</h3>
-          <p><strong>Indicadores necessários (aptidão):</strong></p>
-          <ul>
-            <li>Controle emocional.</li>
-            <li>Equilíbrio e estabilidade emocional.</li>
-            <li>Autocontrole e prudência.</li>
-            <li>Maturidade e segurança pessoal.</li>
-            <li>Senso crítico.</li>
-            <li>Capacidade empática.</li>
-            <li>Autocrítica.</li>
-          </ul>
-
-          <p><strong>Indicadores restritivos (inaptidão):</strong></p>
-          <ul>
-            <li>Agressividade elevada.</li>
-            <li>Impulsividade.</li>
-            <li>Instabilidade emocional e explosividade.</li>
-            <li>Quadros de ansiedade severa.</li>
-            <li>Sintomas depressivos significativos.</li>
-            <li>Hostilidade marcada.</li>
-            <li>Imaturidade emocional.</li>
-            <li>Baixa tolerância à frustração.</li>
-            <li>Sinais de transtornos de personalidade desadaptativos.</li>
-          </ul>
-
-          <h3>5.3. Juízo Crítico</h3>
-          <p>
-            O juízo crítico é avaliado principalmente por meio da <strong>entrevista semiestruturada</strong> e de <strong>situações-problema</strong> envolvendo o uso potencial da arma.
-          </p>
-
-          <p><strong>Exemplos de perguntas de situações-problema:</strong></p>
-          <ul>
-            <li>“Você está em casa à noite e ouve um barulho no quintal. Qual seria sua reação com a arma?”</li>
-            <li>“Em uma discussão de trânsito, outra pessoa se aproxima agressivamente. O que você faria?”</li>
-            <li>“Você percebe que alguém pode estar seguindo você. Como agiria?”</li>
-            <li>“Seu filho ou sobrinho encontra sua arma. O que deveria ter sido feito antes?”</li>
-          </ul>
-
-          <p><strong>Aspectos a serem avaliados nessas respostas:</strong></p>
-          <ul>
-            <li>Reações proporcionais à situação.</li>
-            <li>Priorização de medidas de segurança e de fuga.</li>
-            <li>Uso da arma como último recurso.</li>
-            <li>Compreensão da responsabilidade legal e ética do uso de arma de fogo.</li>
-          </ul>
-        </section>
-
-        <!-- 6. PROCEDIMENTOS DA AVALIAÇÃO PSICOLÓGICA -->
-        <section class="pdf-section page-break">
-          <h2 id="sec7">6. Procedimentos da Avaliação Psicológica</h2>
-
-          <h3>6.1. Etapas da Avaliação</h3>
-
-          <p><strong>1. Agendamento e orientações</strong></p>
-          <ul>
-            <li>Esclarecer ao candidato o processo completo de avaliação.</li>
-            <li>Informar duração aproximada: entre 2 e 4 horas, em uma ou mais sessões.</li>
-            <li>Listar documentos necessários e orientações prévias (horário, local, condições de comparecimento).</li>
-          </ul>
-
-          <p><strong>2. Aplicação individual</strong></p>
-          <ul>
-            <li>Garantir ambiente silencioso, bem iluminado, ventilado e com privacidade.</li>
-            <li>Aplicar os testes na ordem previamente planejada, respeitando instruções padronizadas.</li>
-            <li>Respeitar rigorosamente o tempo de aplicação de cada instrumento.</li>
-          </ul>
-
-          <p><strong>3. Entrevista semiestruturada</strong></p>
-          <ul>
-            <li>Coletar histórico pessoal e profissional.</li>
-            <li>Investigar a motivação para porte/registro de arma.</li>
-            <li>Apresentar e discutir situações-problema.</li>
-            <li>Explorar experiência prévia com armas e cursos de tiro.</li>
-            <li>Avaliar condições de saúde mental, uso de medicações e histórico de tratamento psicológico ou psiquiátrico.</li>
-          </ul>
-
-          <p><strong>4. Análise e correção</strong></p>
-          <ul>
-            <li>Realizar correção manual ou informatizada, conforme o teste.</li>
-            <li>Integrar análise qualitativa e quantitativa dos resultados.</li>
-            <li>Confrontar dados da entrevista, observação clínica e testes.</li>
-          </ul>
-
-          <p><strong>5. Elaboração do laudo</strong></p>
-          <ul>
-            <li>Redigir laudo de acordo com o <strong>modelo oficial da Polícia Federal</strong>.</li>
-            <li>Apresentar apenas a <strong>conclusão</strong> (APTO ou INAPTO), sem detalhar escores ou conteúdos de testes, resguardando o sigilo técnico.</li>
-            <li>Assinar manualmente ou com assinatura digital válida.</li>
-          </ul>
-
-          <h3>6.2. Documentos Resultantes</h3>
-
-          <p><strong>Para a Polícia Federal:</strong></p>
-          <ul>
-            <li><strong>Laudo Psicológico</strong> com conclusão APTO ou INAPTO.</li>
-            <li>Em modelo específico exigido pela PF.</li>
-            <li>Sem detalhamento de testes, métodos ou resultados numéricos.</li>
-          </ul>
-
-          <p><strong>Para o avaliado:</strong></p>
-          <ul>
-            <li><strong>Atestado Psicológico</strong>, se solicitado, contendo objetivo e conclusão da avaliação, observando a Resolução CFP 06/2019.</li>
-            <li>O profissional deve manter cópia dos documentos por, no mínimo, 5 anos.</li>
-          </ul>
-
-          <p><strong>Validade dos documentos:</strong> até 2 anos a partir da data de emissão, salvo alterações determinadas pela legislação vigente ou por ato administrativo específico.</p>
-        </section>
-
-        <!-- 7. IMPEDIMENTOS ÉTICOS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec8">7. Impedimentos Éticos</h2>
-
-          <h3>7.1. Situações em que o psicólogo não pode avaliar</h3>
-          <p>Para preservar a imparcialidade e evitar conflito de interesses, o psicólogo <strong>não deve</strong> realizar avaliação psicológica para porte/registro de arma de fogo nas seguintes situações:</p>
-          <ul>
-            <li>Cônjuges e companheiros.</li>
-            <li>Parentes até 3º grau.</li>
-            <li>Amigos próximos ou pessoas com laços afetivos significativos.</li>
-            <li>Colegas de clube de tiro com relacionamento pessoal próximo.</li>
-            <li>Funcionários da mesma empresa de segurança onde o psicólogo atue.</li>
-            <li>Pessoas com quem mantenha vínculo profissional ou comercial direto.</li>
-            <li>Casos em que exista conflito de interesse explícito ou potencial.</li>
-          </ul>
-
-          <h3>7.2. Situações em que deve se declarar impedido</h3>
-          <p>O psicólogo deve avaliar o contexto e, se necessário, se declarar impedido ou suspeito para conduzir a avaliação, especialmente quando:</p>
-          <ul>
-            <li>O avaliado apresenta transtorno mental grave não tratado ou descompensado.</li>
-            <li>Há histórico documentado de violência ou agressividade significativa.</li>
-            <li>Há evidências de dependência química ativa (álcool ou outras substâncias).</li>
-            <li>Há comprometimento cognitivo relevante, que inviabilize compreensão adequada de normas e riscos.</li>
-          </ul>
-          <p>
-            Em tais situações, o profissional pode orientar sobre busca de tratamento, reavaliação futura ou encaminhamento a outros serviços, sempre registrando em prontuário suas decisões e justificativas.
-          </p>
-        </section>
-
-        <!-- 8. OBRIGAÇÕES ÉTICAS E LEGAIS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec9">8. Obrigações Éticas e Legais</h2>
-
-          <h3>8.1. Código de Ética (Resolução CFP 10/2005)</h3>
-          <p>Na atuação com laudos para porte e registro de armas de fogo, o psicólogo deve observar, entre outros, os seguintes princípios:</p>
-          <ul>
-            <li><strong>Sigilo profissional</strong>: proteger informações colhidas na avaliação, compartilhando-as apenas nos limites legais e éticos.</li>
-            <li><strong>Responsabilidade técnica</strong>: responder pelos métodos, testes e conclusões utilizadas/os.</li>
-            <li><strong>Uso exclusivo de testes aprovados</strong>: utilizar apenas instrumentos com parecer favorável no SATEPSI.</li>
-            <li><strong>Documentos psicológicos</strong>: elaborar laudos, atestados e pareceres segundo a Resolução CFP 06/2019.</li>
-            <li><strong>Atualização profissional contínua</strong>: manter-se atualizado sobre legislações, resoluções e boas práticas da avaliação psicológica.</li>
-          </ul>
-
-          <h3>8.2. Guarda de Documentos</h3>
-          <p><strong>Prazo mínimo:</strong> 5 anos, contados a partir da data de conclusão da avaliação.</p>
-          <p><strong>Documentos que devem ser armazenados:</strong></p>
-          <ul>
-            <li>Protocolos originais de testes psicológicos.</li>
-            <li>Cópias de laudos emitidos.</li>
-            <li>Atestados eventualmente emitidos.</li>
-            <li>Termos de consentimento e demais documentos associados ao processo.</li>
-          </ul>
-
-          <h3>8.3. Fiscalização</h3>
-          <p><strong>Competências do CRP-RJ:</strong></p>
-          <ul>
-            <li>Fiscalizar documentação técnica e guarda de prontuários.</li>
-            <li>Verificar condições do ambiente de atendimento.</li>
-            <li>Avaliar a qualidade técnica dos laudos emitidos.</li>
-            <li>Verificar o uso de testes psicológicos aprovados no SATEPSI.</li>
-          </ul>
-
-          <p><strong>Competências da Polícia Federal:</strong></p>
-          <ul>
-            <li>Verificar o cumprimento da bateria mínima de testes (conforme IN 78/2014).</li>
-            <li>Acompanhar as condições de aplicação da avaliação (estrutura, documentação, credenciamento).</li>
-          </ul>
-        </section>
-
-        <!-- 9. PASSO A PASSO PRÁTICO -->
-        <section class="pdf-section page-break">
-          <h2 id="sec10">9. Passo a Passo Prático</h2>
-
-          <h3>Fase 1: Preparação (1 a 6 meses)</h3>
-
-          <p><strong>Mês 1–2:</strong></p>
-          <ul>
-            <li>Realizar curso de capacitação (40h) com certificação específica para porte de arma.</li>
-            <li>Obter certificados de aptidão em testes projetivos (ex.: Palográfico, Zulliger) e expressivos (ex.: Pfister).</li>
-            <li>Estudar detidamente a Resolução CFP 01/2022 e a IN PF 78/2014.</li>
-          </ul>
-
-          <p><strong>Mês 2–3:</strong></p>
-          <ul>
-            <li>Adquirir bateria completa de testes psicológicos.</li>
-            <li>Regularizar consultório (alvarás, fotos do ambiente, croquis/planta baixa).</li>
-          </ul>
-
-          <p><strong>Mês 3–4:</strong></p>
-          <ul>
-            <li>Reunir certidões negativas (Justiça Federal, Estadual RJ, Militar, Eleitoral).</li>
-            <li>Preparar documentação pessoal necessária ao credenciamento.</li>
-            <li>Registrar fotograficamente o ambiente de trabalho.</li>
-          </ul>
-
-          <p><strong>Mês 4–5:</strong></p>
-          <ul>
-            <li>Solicitar credenciamento via Gov.br ou presencialmente na PF/RJ.</li>
-            <li>Aguardar análise, que costuma variar entre 30 e 90 dias.</li>
-          </ul>
-
-          <p><strong>Mês 5–6:</strong></p>
-          <ul>
-            <li>Receber credenciamento com validade de 4 anos.</li>
-            <li>Iniciar divulgação do serviço (site, redes sociais, clubes de tiro, parcerias).</li>
-          </ul>
-
-          <h3>Fase 2: Atuação</h3>
-
-          <p><strong>1. Agendamento:</strong></p>
-          <ul>
-            <li>Receber contato do candidato e esclarecer objetivo da avaliação.</li>
-            <li>Explicar valores, formas de pagamento e tempo estimado de sessão.</li>
-            <li>Agendar data, horário e informar documentos necessários.</li>
-          </ul>
-
-          <p><strong>2. Avaliação (2–4 horas):</strong></p>
-          <ul>
-            <li>Aplicar a bateria completa de testes previamente definida.</li>
-            <li>Realizar entrevista semiestruturada com situações-problema.</li>
-            <li>Observar comportamento durante toda a aplicação.</li>
-          </ul>
-
-          <p><strong>3. Análise (1–2 horas):</strong></p>
-          <ul>
-            <li>Corrigir testes de acordo com manuais.</li>
-            <li>Analisar o perfil global do candidato.</li>
-            <li>Integrar informações da entrevista, observações e resultados dos testes.</li>
-          </ul>
-
-          <p><strong>4. Laudo (30 minutos – 1 hora):</strong></p>
-          <ul>
-            <li>Redigir laudo no modelo exigido pela PF.</li>
-            <li>Concluir pela condição de APTO ou INAPTO.</li>
-            <li>Assinar digitalmente ou manualmente.</li>
-          </ul>
-
-          <p><strong>5. Entrega:</strong></p>
-          <ul>
-            <li>Fornecer laudo ao avaliado, orientando quanto à guarda e uso.</li>
-            <li>Explicar a validade de até 2 anos.</li>
-            <li>Arquivar cópia e protocolos pelo prazo mínimo de 5 anos.</li>
-          </ul>
-
-          <h3>Fase 3: Manutenção</h3>
-          <ul>
-            <li>Renovar credenciamento a cada 4 anos.</li>
-            <li>Participar de cursos, supervisões e congressos para atualização.</li>
-            <li>Verificar periodicamente a situação dos testes no SATEPSI.</li>
-            <li>Renovar alvarás e demais licenças anualmente.</li>
-          </ul>
-        </section>
-
-        <!-- 10. LINKS ÚTEIS E CONTATOS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec11">10. Links Úteis e Contatos</h2>
-
-          <h3>10.1. Órgãos Oficiais</h3>
-          <p><strong>Conselho Federal de Psicologia (CFP)</strong></p>
-          <ul>
-            <li>Site: <a href="https://site.cfp.org.br/">https://site.cfp.org.br/</a></li>
-            <li>Manual Arma de Fogo: <a href="https://site.cfp.org.br/wp-content/uploads/2022/06/manual_arma_fogo-5-1.pdf">https://site.cfp.org.br/wp-content/uploads/2022/06/manual_arma_fogo-5-1.pdf</a></li>
-            <li>Resolução CFP 01/2022: <a href="https://atosoficiais.com.br/cfp/resolucao-do-exercicio-profissional-n-1-2022">https://atosoficiais.com.br/cfp/resolucao-do-exercicio-profissional-n-1-2022</a></li>
-          </ul>
-
-          <p><strong>Conselho Regional de Psicologia – RJ (CRP-RJ)</strong></p>
-          <ul>
-            <li>Site: <a href="https://www.crprj.org.br/">https://www.crprj.org.br/</a></li>
-            <li>E-mail: atendimento@crprj.org.br</li>
-            <li>Telefone: (21) 3613-8700</li>
-            <li>Endereço: Rua Teófilo Otoni, nº 93 – Centro, Rio de Janeiro – RJ – CEP: 20090-070</li>
-          </ul>
-
-          <p><strong>Polícia Federal – Credenciamento de Psicólogos</strong></p>
-          <ul>
-            <li>Serviço de credenciamento: <a href="https://www.gov.br/pt-br/servicos/credenciar-psicologo-para-emissao-de-comprovante-de-aptidao-psicologica-para-manuseio-de-armas-de-fogo">https://www.gov.br/pt-br/servicos/credenciar-psicologo-para-emissao-de-comprovante-de-aptidao-psicologica-para-manuseio-de-armas-de-fogo</a></li>
-            <li>Lista de psicólogos credenciados: <a href="https://www.gov.br/pf/pt-br/assuntos/armas/psicologos/psicologos-crediciados">https://www.gov.br/pf/pt-br/assuntos/armas/psicologos/psicologos-crediciados</a></li>
-            <li>IN 78/2014: <a href="https://www.gov.br/pf/pt-br/assuntos/armas/psicologos/instrucao-normativa_78_10defevereiro2014-1.pdf">https://www.gov.br/pf/pt-br/assuntos/armas/psicologos/instrucao-normativa_78_10defevereiro2014-1.pdf</a></li>
-            <li>Taxas: <a href="https://www.gov.br/pf/pt-br/assuntos/armas/duvidas-frequentes/taxas">https://www.gov.br/pf/pt-br/assuntos/armas/duvidas-frequentes/taxas</a></li>
-          </ul>
-
-          <p><strong>SATEPSI – Sistema de Avaliação de Testes Psicológicos</strong></p>
-          <ul>
-            <li>Testes favoráveis: <a href="https://satepsi.cfp.org.br/testesfavoraveis.cfm">https://satepsi.cfp.org.br/testesfavoraveis.cfm</a></li>
-            <li>Lista completa: <a href="https://satepsi.cfp.org.br/lista_teste_completa.cfm">https://satepsi.cfp.org.br/lista_teste_completa.cfm</a></li>
-          </ul>
-
-          <h3>10.2. Fornecedores de Testes</h3>
-          <ul>
-            <li><strong>Vetor Editora</strong> – <a href="https://www.vetoreditora.com.br/">https://www.vetoreditora.com.br/</a></li>
-            <li><strong>Hogrefe Brasil</strong> – <a href="https://hogrefe.com.br/">https://hogrefe.com.br/</a></li>
-            <li><strong>Casa do Psicólogo (Pearson)</strong> – consultar distribuidores regionais.</li>
-            <li><strong>Racional RH</strong> – <a href="https://www.racionalrh.com.br/">https://www.racionalrh.com.br/</a></li>
-            <li><strong>Insight Psicologia</strong> – <a href="http://www.insightpsicologia.com.br/">http://www.insightpsicologia.com.br/</a></li>
-          </ul>
-
-          <h3>10.3. Cursos e Capacitação</h3>
-          <ul>
-            <li><strong>CICLO CEAP</strong> – <a href="https://cicloceap.com.br/">https://cicloceap.com.br/</a> – Curso Porte de Arma (40h EAD): referência R$ 1.690,00.</li>
-            <li><strong>IPOG</strong> – <a href="https://ipog.edu.br/">https://ipog.edu.br/</a> – cursos de curta duração (consultar).</li>
-            <li><strong>Experts Cursos</strong> – <a href="https://www.expertscursos.com.br/">https://www.expertscursos.com.br/</a> – capacitação em avaliação (EAD).</li>
-            <li><strong>Psicologus</strong> – <a href="https://www.psicologus.com.br/">https://www.psicologus.com.br/</a> – combo EAD (referência R$ 543,20).</li>
-            <li><strong>CFP – Cursos oficiais</strong> – <a href="https://site.cfp.org.br/">https://site.cfp.org.br/</a> – agenda de eventos e formações.</li>
-          </ul>
-
-          <h3>10.4. Ferramentas de Trabalho</h3>
-          <ul>
-            <li><strong>AvalPsico – Correção informatizada</strong>: <a href="https://avalpsico.com/">https://avalpsico.com/</a> – solução para correção de Pfister, Zulliger, Palográfico.</li>
-            <li><strong>Tabela de Honorários FENAPSI/CFP</strong>: <a href="https://site.cfp.org.br/wp-content/uploads/2024/12/FENAPSI_TABELA_ATUALIZADA_Maio_2024.pdf">https://site.cfp.org.br/wp-content/uploads/2024/12/FENAPSI_TABELA_ATUALIZADA_Maio_2024.pdf</a></li>
-          </ul>
-        </section>
-
-        <!-- 11. PERGUNTAS FREQUENTES -->
-        <section class="pdf-section page-break">
-          <h2 id="sec12">11. Perguntas Frequentes (FAQ)</h2>
-
-          <p><strong>1. Quanto tempo leva para se credenciar?</strong></p>
-          <p>De 1 a 6 meses, considerando a fase de preparação (cursos, documentação, estrutura) e o prazo de análise da PF, que costuma variar entre 30 e 90 dias.</p>
-
-          <p><strong>2. Posso aplicar testes online/remotamente?</strong></p>
-          <p>Apenas testes que possuam autorização e parecer favorável para aplicação online no SATEPSI podem ser usados dessa forma. A maioria dos instrumentos utilizados para porte de arma exige aplicação presencial.</p>
-
-          <p><strong>3. Posso atuar sem credenciamento na Polícia Federal?</strong></p>
-          <p>Não. Para emitir laudos de aptidão psicológica válidos para a PF, o credenciamento é obrigatório.</p>
-
-          <p><strong>4. Quanto posso cobrar pelo laudo?</strong></p>
-          <p>A Tabela FENAPSI/CFP (maio/2024) sugere valores entre R$ 396,73 e R$ 925,70. No mercado do RJ, observa-se faixa de R$ 400,00 a R$ 600,00 por avaliação.</p>
-
-          <p><strong>5. O laudo tem validade?</strong></p>
-          <p>Sim. Em geral, até 2 anos a partir da data de emissão, salvo mudança legislativa.</p>
-
-          <p><strong>6. Preciso ter consultório próprio?</strong></p>
-          <p>É necessário dispor de espaço adequado, com sala de espera, sala de aplicação e banheiro. Pode ser consultório próprio ou sala compartilhada, desde que atenda às exigências legais e sanitárias.</p>
-
-          <p><strong>7. Posso dividir consultório com outros profissionais?</strong></p>
-          <p>Sim, desde que o espaço de aplicação seja privativo, haja sigilo e os alvarás estejam em conformidade, preferencialmente em seu nome para o serviço ofertado.</p>
-
-          <p><strong>8. Como renovar o credenciamento?</strong></p>
-          <p>A cada 4 anos, seguindo o mesmo processo de solicitação inicial pelo Gov.br ou presencialmente, com atualização de documentos.</p>
-
-          <p><strong>9. Posso reprovar alguém?</strong></p>
-          <p>Sim. Se os resultados indicarem características restritivas, falta de aptidão cognitiva, emocional ou de juízo crítico, o laudo deve concluir pela inaptidão, sempre com fundamentação técnica.</p>
-
-          <p><strong>10. O que fazer se o candidato discordar do resultado?</strong></p>
-          <p>Explique o caráter técnico da avaliação e oriente sobre a possibilidade de nova avaliação com outro profissional credenciado, conforme normativas vigentes.</p>
-        </section>
-
-        <!-- 12. DICAS PRÁTICAS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec13">12. Dicas Práticas</h2>
-
-          <h3>12.1. Para Começar Bem</h3>
-          <ul>
-            <li><strong>Priorize cursos com supervisão prática</strong>, não apenas conteúdo teórico.</li>
-            <li><strong>Inicie com bateria que domine bem</strong>, por exemplo: Palográfico + Pfister + AC + TMV + R-1.</li>
-            <li><strong>Pratique correção antes de atuar</strong> com casos reais, utilizando casos simulados ou supervisão.</li>
-            <li><strong>Tenha modelo de laudo pronto</strong> seguindo o padrão exigido pela PF.</li>
-            <li><strong>Crie um checklist de aplicação</strong> para evitar esquecimentos de etapas ou documentos.</li>
-            <li><strong>Invista em ambiente adequado</strong>, limpo, organizado e silencioso, pois a primeira impressão influencia a relação profissional.</li>
-            <li><strong>Faça parcerias com clubes de tiro</strong>, instrutores e despachantes legalmente constituídos, sempre mantendo ética na divulgação.</li>
-            <li><strong>Considere contratar seguro de responsabilidade civil</strong> para proteção profissional.</li>
-          </ul>
-
-          <h3>12.2. Erros Comuns a Evitar</h3>
-          <ul>
-            <li>Utilizar testes desatualizados ou com parecer desfavorável no SATEPSI.</li>
-            <li>Basear a decisão apenas em testes, negligenciando a entrevista e observações clínicas.</li>
-            <li>Laudar parentes, amigos ou pessoas com vínculo de interesse.</li>
-            <li>Cobrar valores muito abaixo da tabela, desvalorizando o trabalho profissional.</li>
-            <li>Deixar de arquivar protocolos originais e registros da avaliação.</li>
-            <li>Esquecer de renovar o credenciamento, levando à perda de validade da atuação.</li>
-            <li>Não acompanhar novas resoluções, leis ou mudanças na IN da PF.</li>
-          </ul>
-        </section>
-
-        <!-- 13. LEGISLAÇÃO DE REFERÊNCIA -->
-        <section class="pdf-section page-break">
-          <h2 id="sec14">13. Legislação de Referência</h2>
-
-          <p><strong>Leis Federais:</strong></p>
-          <ul>
-            <li><strong>Lei nº 10.826/2003</strong> – Estatuto do Desarmamento, que disciplina registro, posse e comercialização de armas de fogo e munição.</li>
-            <li><strong>Lei nº 5.766/1971</strong> – Criação do Conselho Federal e dos Conselhos Regionais de Psicologia.</li>
-          </ul>
-
-          <p><strong>Resoluções do CFP:</strong></p>
-          <ul>
-            <li><strong>Resolução CFP nº 01/2022</strong> – Dispõe sobre a avaliação psicológica para concessão de registro e porte de arma de fogo.</li>
-            <li><strong>Resolução CFP nº 09/2018</strong> – Regulamenta a Avaliação Psicológica e o SATEPSI.</li>
-            <li><strong>Resolução CFP nº 06/2019</strong> – Estabelece normas para elaboração de documentos escritos produzidos pelo psicólogo.</li>
-            <li><strong>Resolução CFP nº 10/2005</strong> – Aprova o Código de Ética Profissional do Psicólogo.</li>
-          </ul>
-
-          <p><strong>Instrução Normativa da Polícia Federal:</strong></p>
-          <ul>
-            <li><strong>IN DPF nº 78/2014</strong> – Regulamenta o credenciamento e a fiscalização de psicólogos para emissão de laudos de aptidão psicológica para manuseio de armas de fogo.</li>
-          </ul>
-        </section>
-
-        <!-- 14. CONSIDERAÇÕES FINAIS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec15">14. Considerações Finais</h2>
-          <p>
-            A atuação com laudos psicológicos para porte e registro de armas de fogo é uma área em expansão, com demanda constante no Estado do Rio de Janeiro. Trata-se de atividade de alta responsabilidade social, pois as decisões do psicólogo impactam diretamente a segurança do próprio avaliado e da coletividade.
-          </p>
-          <p>
-            Esse trabalho exige:
-          </p>
-          <ul>
-            <li><strong>Rigor técnico</strong>: escolha cuidadosa de instrumentos, correta aplicação e interpretação, fundamentação científica consistente.</li>
-            <li><strong>Responsabilidade ética</strong>: sigilo, imparcialidade, ausência de conflito de interesses e respeito à dignidade do avaliado.</li>
-            <li><strong>Atualização contínua</strong>: a legislação e as normativas podem mudar; é imprescindível acompanhar publicações do CFP, CRP-RJ e PF.</li>
-            <li><strong>Postura profissional</strong>: decisões de aptidão ou inaptidão devem ser firmes, embasadas e sempre orientadas pela proteção da vida e do bem comum.</li>
-          </ul>
-
-          <p><strong>Investimento inicial estimado:</strong> entre R$ 4.300,00 e R$ 10.500,00.</p>
-          <p><strong>Retorno esperado:</strong> entre 2 e 5 meses, dependendo do volume de atendimentos.</p>
-          <p><strong>Renda mensal potencial:</strong> de aproximadamente R$ 2.000,00 a R$ 10.000,00 ou mais, conforme demanda, rede de contatos e organização do serviço.</p>
-
-          <p><strong>Próximos passos recomendados ao psicólogo interessado:</strong></p>
-          <ol>
-            <li>Escolher e realizar curso de capacitação específico com supervisão.</li>
-            <li>Regularizar infraestrutura física e documental do consultório.</li>
-            <li>Iniciar e acompanhar o processo de credenciamento junto à Polícia Federal.</li>
-            <li>Desenvolver estratégia ética de divulgação dos serviços.</li>
-            <li>Atuar com responsabilidade, ética e compromisso social permanente.</li>
-          </ol>
-
-          <p>
-            Este manual é informativo e deve ser complementado com a leitura integral da legislação vigente, das resoluções do CFP e das orientações atualizadas do CRP-RJ e da Polícia Federal.
-          </p>
-
-          <p style="margin-top: 8mm;"><strong>Elaborado em:</strong> Janeiro de 2025</p>
-          <p><strong>Fontes principais:</strong> CFP, CRP-RJ, Polícia Federal, SATEPSI, FENAPSI.</p>
-        </section>
-
-        <!-- ANEXOS -->
-        <section class="pdf-section page-break">
-          <h2 id="sec16">Anexos</h2>
-
-          <h3 id="sec16-1">Anexo A – Checklist de Credenciamento</h3>
-          <p class="checklist-item">☐ Inscrição ativa no CRP-RJ.</p>
-          <p class="checklist-item">☐ Comprovante de, no mínimo, 2 anos de experiência profissional.</p>
-          <p class="checklist-item">☐ Certificado de curso de capacitação (40h) em avaliação para porte de arma.</p>
-          <p class="checklist-item">☐ Certificado de aptidão em testes projetivos (ex.: Palográfico, Zulliger).</p>
-          <p class="checklist-item">☐ Certificado de aptidão em testes expressivos (ex.: Pfister).</p>
-          <p class="checklist-item">☐ Foto 3x4 recente.</p>
-          <p class="checklist-item">☐ Cópias autenticadas de RG e CPF.</p>
-          <p class="checklist-item">☐ Certidão negativa da Justiça Federal.</p>
-          <p class="checklist-item">☐ Certidão negativa da Justiça Estadual RJ.</p>
-          <p class="checklist-item">☐ Certidão negativa da Justiça Militar.</p>
-          <p class="checklist-item">☐ Certidão negativa da Justiça Eleitoral.</p>
-          <p class="checklist-item">☐ Certidão negativa de infrações éticas do CRP.</p>
-          <p class="checklist-item">☐ Fotos da sala de avaliação (ambiente, privacidade, mobiliário).</p>
-          <p class="checklist-item">☐ Planta baixa ou croquis do consultório.</p>
-          <p class="checklist-item">☐ Alvará de funcionamento atualizado.</p>
-          <p class="checklist-item">☐ Alvará da Vigilância Sanitária.</p>
-          <p class="checklist-item">☐ Declaração de não responder a inquérito ou processo criminal (exceto culposos ou com reabilitação).</p>
-          <p class="checklist-item">☐ Formulário da PF devidamente preenchido (via Gov.br ou impresso).</p>
-
-          <h3 class="page-break" id="sec16-2">Anexo B – Checklist de Aplicação</h3>
-          <p class="checklist-item">☐ Confirmar agendamento com o candidato (data, horário, endereço).</p>
-          <p class="checklist-item">☐ Preparar sala (iluminação, temperatura, ruído, privacidade).</p>
-          <p class="checklist-item">☐ Separar previamente testes e materiais necessários.</p>
-          <p class="checklist-item">☐ Preparar cronômetro ou relógio para controle de tempo.</p>
-          <p class="checklist-item">☐ Revisar a ordem de aplicação dos instrumentos.</p>
-          <p class="checklist-item">☐ Garantir assinatura do termo de consentimento informado.</p>
-          <p class="checklist-item">☐ Aplicar a bateria completa de testes psicológicos.</p>
-          <p class="checklist-item">☐ Realizar entrevista semiestruturada, incluindo situações-problema.</p>
-          <p class="checklist-item">☐ Observar e registrar comportamento durante toda a aplicação.</p>
-          <p class="checklist-item">☐ Guardar e identificar adequadamente os protocolos originais.</p>
-          <p class="checklist-item">☐ Corrigir e analisar os resultados de forma integrada.</p>
-          <p class="checklist-item">☐ Elaborar laudo no modelo da PF, com conclusão APTO/INAPTO.</p>
-          <p class="checklist-item">☐ Entregar laudo ao avaliado e orientar quanto à validade.</p>
-          <p class="checklist-item">☐ Arquivar cópia do laudo e dos protocolos por, no mínimo, 5 anos.</p>
-
-          <h3 class="page-break" id="sec16-3">Anexo C – Modelo de Entrevista (Situações-Problema)</h3>
-          <p><strong>1. Segurança e armazenamento:</strong></p>
-          <p>“Onde pretende guardar a arma em casa? Como evitará acesso de terceiros?”</p>
-
-          <p><strong>2. Reação a ameaças:</strong></p>
-          <p>“Alguém invade sua residência à noite. Qual seria sua primeira ação?”</p>
-
-          <p><strong>3. Controle emocional:</strong></p>
-          <p>“Você está dirigindo e alguém faz uma ultrapassagem perigosa, quase causando um acidente. Você está armado. Como reagiria?”</p>
-
-          <p><strong>4. Uso proporcional:</strong></p>
-          <p>“Em que situações você considera apropriado sacar a arma?”</p>
-
-          <p><strong>5. Responsabilidade legal:</strong></p>
-          <p>“Você conhece as consequências legais do uso indevido de arma de fogo?”</p>
-
-          <p><strong>6. Motivação:</strong></p>
-          <p>“Por que você deseja ter porte/registro de arma de fogo?”</p>
-
-          <p><strong>7. Experiência:</strong></p>
-          <p>“Você já teve contato com armas? Fez curso de tiro? Pratica?”</p>
-
-          <p><strong>8. Saúde mental:</strong></p>
-          <p>“Faz uso de medicação? Já teve diagnóstico de transtorno mental?”</p>
-
-          <p style="margin-top: 8mm; font-style: italic;">
-            Este guia é informativo e deve ser complementado com leitura da legislação completa, das resoluções profissionais e com formação adequada em avaliação psicológica para porte e registro de armas de fogo.
-          </p>
-
-          <p style="margin-top: 6mm;"><strong>Fim do Manual</strong></p>
-        </section>
-
-      </div>
-    </div>
-  </body>
+    </script>
+</body>
 </html>
