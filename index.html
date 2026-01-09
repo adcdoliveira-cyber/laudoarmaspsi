@@ -16,295 +16,163 @@
         --light-beige: #f8f4e9;
         --warm-white: #fffdf8;
         --soft-gray: #e8e4dc;
+        --text-dark: #2c3e50;
       }
       
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         background: linear-gradient(135deg, var(--light-beige) 0%, var(--warm-white) 100%);
         margin: 0;
         padding: 0;
-        font-family: 'Georgia', 'Times New Roman', serif;
-        line-height: 1.8;
-        color: #333;
-        position: relative;
-      }
-      
-      body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
-            radial-gradient(circle at 90% 80%, rgba(74, 124, 89, 0.05) 0%, transparent 20%);
-        pointer-events: none;
-        z-index: -1;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
       }
       
       #document {
-        width: 210mm;
+        max-width: 1000px;
+        width: 95%;
         margin: 2rem auto;
-        background: var(--warm-white);
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-size: 12pt;
-        color: #333;
+        background: white;
+        color: var(--text-dark);
         position: relative;
         border: 1px solid var(--soft-gray);
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(198, 109, 66, 0.1);
+        border-radius: 12px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        overflow: hidden;
       }
-      
-      #document::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 5px;
-        background: linear-gradient(90deg, var(--gold-primary), var(--terracotta-primary), var(--green-primary));
-        border-radius: 15px 15px 0 0;
+
+      .hero-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-bottom: 5px solid var(--gold-primary);
       }
       
       .inner {
-        padding: 25mm 25mm 25mm 25mm;
+        padding: 40px;
       }
       
+      @media (max-width: 768px) {
+        .inner {
+          padding: 20px;
+        }
+      }
+
       h1, h2, h3, h4, h5 {
         font-weight: bold;
         text-align: center;
         margin-top: 0;
       }
-      
+
       h1 {
+        font-family: 'Playfair Display', serif;
         color: var(--terracotta-primary);
-        font-size: 22pt;
-        margin-bottom: 8mm;
-        border-bottom: 3px solid var(--gold-secondary);
-        padding-bottom: 15px;
-        position: relative;
-      }
-      
-      h1::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 4px;
-        background: var(--green-primary);
-        border-radius: 2px;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
       }
       
       h2 {
         color: var(--green-primary);
-        font-size: 18pt;
-        margin-top: 8mm;
-        margin-bottom: 6mm;
-        padding-bottom: 10px;
+        font-size: 1.8rem;
+        margin-top: 2rem;
         border-bottom: 2px solid var(--gold-secondary);
+        padding-bottom: 10px;
+        text-align: left;
       }
-      
+
       h3 {
         color: var(--terracotta-primary);
-        font-size: 15pt;
-        margin-top: 6mm;
-        margin-bottom: 4mm;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        text-align: left;
       }
-      
-      h4 {
-        color: var(--gold-primary);
-        font-size: 14pt;
-        margin-top: 4mm;
-        margin-bottom: 3mm;
+
+      .content-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       }
-      
+
       p {
         text-align: justify;
-        margin: 0 0 5mm 0;
-        line-height: 1.8;
-      }
-      
-      ul, ol {
-        text-align: justify;
-        margin: 0 0 5mm 6mm;
-        padding-left: 6mm;
-        background: linear-gradient(135deg, rgba(248, 244, 233, 0.3) 0%, rgba(255, 253, 248, 0.3) 100%);
-        padding: 10px 15px;
-        border-radius: 8px;
-      }
-      
-      li {
-        margin-bottom: 2mm;
-        position: relative;
-        padding-left: 8px;
-      }
-      
-      li::marker {
-        color: var(--gold-primary);
-      }
-      
-      section.pdf-section {
-        margin-bottom: 16mm;
-        page-break-inside: avoid;
-        padding: 10px 0;
-      }
-      
-      .page-break {
-        page-break-before: always;
-      }
-      
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 4mm 0 4mm 0;
-        font-size: 11pt;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(198, 109, 66, 0.1);
-      }
-      
-      table thead th {
-        background: linear-gradient(135deg, var(--gold-secondary) 0%, var(--terracotta-secondary) 100%);
-        color: #333;
-      }
-      
-      th, td {
-        border: 1px solid var(--soft-gray);
-        padding: 3mm 4mm;
-        text-align: left;
-        vertical-align: top;
-      }
-      
-      caption {
-        caption-side: bottom;
-        text-align: center;
-        font-size: 11pt;
-        margin-top: 2mm;
-        color: var(--green-primary);
+        margin-bottom: 1.2rem;
       }
       
       .toc {
-        text-align: left;
-        margin-bottom: 10mm;
-        background: linear-gradient(135deg, var(--warm-white) 0%, var(--light-beige) 100%);
-        padding: 20px;
+        background: var(--light-beige);
+        padding: 25px;
         border-radius: 10px;
         border: 1px solid var(--soft-gray);
-        box-shadow: 0 5px 15px rgba(198, 109, 66, 0.08);
+        margin-bottom: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 0.95rem;
       }
       
-      .toc h2 {
-        text-align: center;
-        color: var(--terracotta-primary);
-        border-bottom: 1px dashed var(--gold-secondary);
-        padding-bottom: 10px;
+      th {
+        background: var(--green-primary);
+        color: white;
+        padding: 12px;
+        text-align: left;
       }
       
-      .toc ol {
-        margin-left: 0;
-        padding-left: 8mm;
+      td {
+        border: 1px solid var(--soft-gray);
+        padding: 12px;
       }
-      
-      .toc li {
-        margin-bottom: 2mm;
-      }
-      
-      .toc a {
-        color: var(--green-primary);
-        text-decoration: none;
-        padding: 3px 8px;
-        display: inline-block;
-        transition: all 0.3s ease;
-        border-radius: 5px;
-      }
-      
-      .toc a:hover {
-        background: var(--gold-secondary);
-        color: #333;
-        transform: translateX(5px);
-      }
-      
-      .small-text {
-        font-size: 11pt;
-      }
-      
-      .checklist-item {
-        margin-bottom: 2mm;
-      }
-      
+
       .executive-summary {
-        background: linear-gradient(135deg, var(--light-beige) 0%, var(--warm-white) 100%);
+        background: rgba(212, 175, 55, 0.1);
         border-left: 5px solid var(--gold-primary);
-        padding: 12px 15px;
-        margin-top: 4mm;
-        margin-bottom: 6mm;
+        padding: 20px;
+        margin: 20px 0;
         border-radius: 0 8px 8px 0;
-        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
-        position: relative;
-      }
-      
-      .executive-summary::before {
-        content: '★';
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        color: var(--gold-primary);
-        font-size: 1.2rem;
-      }
-      
-      .quote {
         font-style: italic;
-        padding: 12px 15px;
-        background: rgba(74, 124, 89, 0.05);
-        border-left: 4px solid var(--green-primary);
-        margin: 10px 0;
-        border-radius: 0 8px 8px 0;
       }
-      
-      .quote::before {
-        content: '"';
-        font-size: 2rem;
-        color: var(--green-primary);
-        line-height: 1;
-        display: block;
-        margin-bottom: -1rem;
+
+      ul, ol {
+        margin-bottom: 1.2rem;
       }
-      
-      .quote::after {
-        content: '"';
-        font-size: 2rem;
-        color: var(--green-primary);
-        display: block;
-        text-align: right;
+
+      li {
+        margin-bottom: 0.5rem;
       }
-      
+
       a {
         color: var(--terracotta-primary);
         text-decoration: none;
-        font-weight: 500;
+        transition: color 0.3s;
       }
-      
+
       a:hover {
         color: var(--gold-primary);
-        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <div id="document">
+      <img src="attached_assets/stock_images/psychological_evalua_b645547d.jpg" alt="Ambiente Profissional" class="hero-image">
       <div class="inner">
-
         <!-- CAPA -->
         <section class="pdf-section">
           <h1>Manual Completo: Psicólogo no Rio de Janeiro<br>Laudos para Porte de Armas</h1>
-          <p style="text-align: center; margin-top: 10mm;">
-            <strong>Elaborado em:</strong> Janeiro de 2025
+          <p style="text-align: center; margin-top: 10mm; font-size: 1.2rem; color: var(--green-primary);">
+            <strong>Guia Definitivo para Credenciamento e Prática Profissional</strong>
           </p>
-          <p style="text-align: center; margin-top: 2mm;">
-            <strong>Local de referência:</strong> Estado do Rio de Janeiro – Brasil
+          <p style="text-align: center; margin-top: 5mm;">
+            <strong>Elaborado em:</strong> Janeiro de 2025 | <strong>Local:</strong> Rio de Janeiro – Brasil
           </p>
         </section>
 
@@ -318,23 +186,6 @@
               <li><a href="#sec3">Requisitos para Credenciamento na Polícia Federal</a></li>
               <li><a href="#sec4">Bateria Mínima de Testes Psicológicos</a></li>
               <li><a href="#sec5">Custos e Investimentos</a></li>
-              <li><a href="#sec6">Características Psicológicas Avaliadas</a></li>
-              <li><a href="#sec7">Procedimentos da Avaliação Psicológica</a></li>
-              <li><a href="#sec8">Impedimentos Éticos</a></li>
-              <li><a href="#sec9">Obrigações Éticas e Legais</a></li>
-              <li><a href="#sec10">Passo a Passo Prático</a></li>
-              <li><a href="#sec11">Links Úteis e Contatos</a></li>
-              <li><a href="#sec12">Perguntas Frequentes (FAQ)</a></li>
-              <li><a href="#sec13">Dicas Práticas</a></li>
-              <li><a href="#sec14">Legislação de Referência</a></li>
-              <li><a href="#sec15">Considerações Finais</a></li>
-              <li><a href="#sec16">Anexos</a>
-                <ol>
-                  <li><a href="#sec16-1">Anexo A – Checklist de Credenciamento</a></li>
-                  <li><a href="#sec16-2">Anexo B – Checklist de Aplicação</a></li>
-                  <li><a href="#sec16-3">Anexo C – Modelo de Entrevista (Situações-Problema)</a></li>
-                </ol>
-              </li>
             </ol>
           </div>
         </section>
@@ -370,7 +221,7 @@
         <!-- 2. REQUISITOS PARA CREDENCIAMENTO NA POLÍCIA FEDERAL -->
         <section class="pdf-section page-break">
           <h2 id="sec3">2. Requisitos para Credenciamento na Polícia Federal</h2>
-
+          <img src="attached_assets/stock_images/psychological_evalua_83b4853c.jpg" alt="Documentação" class="content-image">
           <h3>2.1. Requisitos Básicos</h3>
           <p>Para atuar formalmente com laudos de aptidão psicológica para porte e registro de arma de fogo junto à Polícia Federal, o psicólogo precisa atender, no mínimo, aos seguintes requisitos:</p>
           <ul>
@@ -440,7 +291,7 @@
         <!-- 3. BATERIA MÍNIMA DE TESTES PSICOLÓGICOS -->
         <section class="pdf-section page-break">
           <h2 id="sec4">3. Bateria Mínima de Testes Psicológicos</h2>
-
+          <img src="attached_assets/stock_images/psychological_evalua_73458ce5.jpg" alt="Avaliação" class="content-image">
           <h3>3.1. Testes Obrigatórios (IN PF 78/2014 e Resolução CFP 01/2022)</h3>
           <p>
             A avaliação para porte ou registro de arma de fogo exige a utilização de uma bateria mínima de testes, contemplando dimensões de personalidade, aspectos emocionais, memória, atenção, inteligência e entrevista clínica.
@@ -527,7 +378,7 @@
         <!-- 4. CUSTOS E INVESTIMENTOS -->
         <section class="pdf-section page-break">
           <h2 id="sec5">4. Custos e Investimentos</h2>
-
+          <img src="attached_assets/stock_images/psychological_evalua_2dba55a0.jpg" alt="Investimento" class="content-image">
           <h3>4.1. Credenciamento na PF</h3>
           <p><strong>Taxas da Polícia Federal:</strong></p>
           <ul>
